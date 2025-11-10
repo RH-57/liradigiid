@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url>
     <loc>http://localhost:8000</loc>
-    <lastmod>2025-11-07T16:38:57+07:00</lastmod>
+    <lastmod>2025-11-10T15:13:49+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
             </url>
@@ -20,14 +20,20 @@
     <priority>0.7</priority>
             </url>
     <url>
+    <loc>http://localhost:8000/artikel/cara-install-windows-10-dan-11-dijamin-berhasil</loc>
+    <lastmod>2025-11-10T10:20:21+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+            </url>
+    <url>
     <loc>http://localhost:8000/artikel/tes-insight</loc>
-    <lastmod>2025-11-07T15:05:50+07:00</lastmod>
+    <lastmod>2025-11-10T15:00:58+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
             </url>
     <url>
     <loc>http://localhost:8000/artikel/mengapa-website-penting-untuk-bisnis-anda</loc>
-    <lastmod>2025-11-07T14:40:31+07:00</lastmod>
+    <lastmod>2025-11-10T10:23:54+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
             </url>

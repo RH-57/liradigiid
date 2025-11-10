@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\MediaSocialController;
 use App\Http\Controllers\Admin\PortfolioController;
+use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Website\ArticleController as WebsiteArticleController;
 use App\Http\Controllers\Website\HomeController;
 use App\Http\Controllers\Website\HowToOrderController;
@@ -34,6 +35,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::resource('/settings/mediasocial', MediaSocialController::class);
 
     Route::resource('/portfolios', PortfolioController::class);
+    Route::resource('/testimonials', TestimonialController::class);
     Route::resource('/articles', ArticleController::class);
 });
 

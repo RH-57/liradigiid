@@ -46,7 +46,7 @@
       @endif
 
       {{-- Konten --}}
-      <article class="prose prose-lg max-w-none text-gray-800 leading-relaxed">
+      <article class="prose prose-lg max-w-none text-gray-800">
         {!! $article->content !!}
       </article>
 

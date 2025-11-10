@@ -7,6 +7,7 @@ use App\Models\Article;
 use App\Models\Contact;
 use App\Models\MediaSocial;
 use App\Models\Portfolio;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 
@@ -31,11 +32,19 @@ class HomeController extends Controller
                 ->get(['id', 'title', 'category', 'excerpt', 'featured_image', 'published_at', 'slug']);
         });
 
+        $testimonials = Cache::remember('testimonials_home', 3600, function () {
+            return Testimonial::where('status', 'active')
+                ->orderBy('id', 'desc')
+                ->take(10)
+                ->get();
+        });
+
         return view('website.pages.home', compact(
             'contacts',
             'mediasocials',
             'portfolios',
             'articles',
+            'testimonials',
         ));
     }
 }

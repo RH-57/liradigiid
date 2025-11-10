@@ -54,3 +54,33 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(slide, 2500);
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.getElementById("testimoni-track");
+  const items = [...track.children];
+
+  // Gandakan item agar slider bisa looping
+  items.forEach(item => {
+    const clone = item.cloneNode(true);
+    track.appendChild(clone);
+  });
+
+  let position = 0;
+  let step = items[0].offsetWidth + 24; // 24px karena gap-6
+
+  function slide() {
+    position += step;
+    if (position >= track.scrollWidth / 2) {
+      position = 0;
+      track.style.transition = "none";
+      track.style.transform = "translateX(0px)";
+      setTimeout(() => {
+        track.style.transition = "transform 0.7s ease-in-out";
+      }, 50);
+      return;
+    }
+    track.style.transform = `translateX(-${position}px)`;
+  }
+
+  setInterval(slide, 2500);
+});
+

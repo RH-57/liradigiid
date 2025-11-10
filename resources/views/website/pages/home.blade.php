@@ -271,14 +271,53 @@
         </div>
     </section>
 
-    <section class="py-20 bg-gradient-to-b from-white to-blue-50 overflow-hidden">
+    <section class="py-16 bg-gradient-to-b from-white to-blue-50 overflow-hidden" id="testimoni">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-[#136ad5] mb-3" data-aos="fade-up">
-            Apa Kata Klien Kami?
+            <h2 class="text-2xl md:text-3xl font-bold text-[#136ad5] mb-2" data-aos="fade-up">
+                Apa Kata Klien Kami?
             </h2>
-            <p class="text-gray-600 mb-12" data-aos="fade-up" data-aos-delay="100">
-            Beberapa portofolio website klien yang pernah kami kerjakan sebelumnya
+            <p class="text-gray-600 mb-10 text-sm md:text-base" data-aos="fade-up" data-aos-delay="100">
+                Cerita singkat dari klien yang telah mempercayakan project mereka bersama <strong>Liradigi</strong>.
             </p>
+
+            <!-- Slider Container -->
+            <div class="relative overflow-hidden">
+                <div id="testimoni-track" class="flex gap-6 transition-transform duration-700 ease-in-out">
+
+                @foreach($testimonials as $testimonial)
+                    <div class="flex-none w-64 bg-white shadow rounded-xl p-5 text-center" data-aos="fade-up">
+
+                        <!-- Foto -->
+                        <img
+                            src="{{ $testimonial->photo ? asset('storage/' . $testimonial->photo) : 'https://i.pravatar.cc/80' }}"
+                            class="w-14 h-14 mx-auto rounded-full mb-3 border-2 border-blue-100"
+                            alt="{{ $testimonial->name }}"
+                        >
+
+                        <!-- Pesan -->
+                        <p class="text-gray-600 text-sm italic mb-3">
+                            “{{ $testimonial->message }}”
+                        </p>
+
+                        <!-- Rating -->
+                        <div class="flex justify-center text-yellow-400 text-xs mb-1">
+                            @for ($i = 1; $i <= 5; $i++)
+                                @if($i <= $testimonial->rating)
+                                    <i class="fa-solid fa-star"></i>
+                                @else
+                                    <i class="fa-regular fa-star"></i>
+                                @endif
+                            @endfor
+                        </div>
+
+                        <!-- Nama -->
+                        <h4 class="font-semibold text-gray-800 text-sm">{{ $testimonial->name }}</h4>
+                        <p class="text-xs text-gray-500">{{ $testimonial->company }}</p>
+
+                    </div>
+                @endforeach
+
+            </div>
         </div>
     </section>
 

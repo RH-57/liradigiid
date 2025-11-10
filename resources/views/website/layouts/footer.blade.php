@@ -28,10 +28,9 @@
         <h4 class="text-lg font-semibold mb-4 text-white">Menu Cepat</h4>
         <ul class="space-y-2 text-blue-100">
           <li><a href="{{ url('/') }}" class="hover:text-yellow-400 transition">Beranda</a></li>
-          <li><a href="#kenapa-memilih-kami" class="hover:text-yellow-400 transition">Tentang Kami</a></li>
-          <li><a href="#harga-paket" class="hover:text-yellow-400 transition">Paket Website</a></li>
-          <li><a href="{{ url('/portfolio') }}" class="hover:text-yellow-400 transition">Portfolio</a></li>
-          <li><a href="#hubungi" class="hover:text-yellow-400 transition">Kontak</a></li>
+          <li><a href="{{ route('web.portfolios') }}" class="hover:text-yellow-400 transition">Portfolio</a></li>
+          <li><a href="{{route('web.howtoorder')}}" class="hover:text-yellow-400 transition">Cara Order</a></li>
+          <li><a href="{{route('web.articles')}}" class="hover:text-yellow-400 transition">Artikel</a></li>
         </ul>
       </div>
 
