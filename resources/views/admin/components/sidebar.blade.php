@@ -63,26 +63,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#post-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-pencil-square"></i><span>Posts</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="post-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li class="nav-item">
-            <a class="nav-link collapsed" href="">
-                <i class="bi bi-circle"></i>
-                <span>Categories</span>
-            </a>
-            </li>
-          <li>
-            <a href="">
-              <i class="bi bi-circle"></i><span> Create New</span>
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="">
+        <a class="nav-link collapsed" href="{{route('users.index')}}">
           <i class="bi bi-person-add"></i>
           <span>Users</span>
         </a>
