@@ -197,40 +197,50 @@
 <script src="{{asset('assets/admin/js/main.js')}}"></script>
 <!-- CKEditor 5 Self-hosted -->
     <script type="importmap">
-    {
-        "imports": {
-            "ckeditor5": "/assets/admin/vendor/ckeditor/ckeditor5.js",
-            "ckeditor5/": "/assets/admin/vendor/ckeditor/"
-        }
+{
+    "imports": {
+        "ckeditor5": "/assets/admin/vendor/ckeditor/ckeditor5.js",
+        "ckeditor5/": "/assets/admin/vendor/ckeditor/"
     }
-    </script>
+}
+</script>
 
-    <script type="module">
-        import {
-            ClassicEditor,
-            Essentials,
-            Paragraph,
-            Bold,
-            Italic,
-            Font
-        } from 'ckeditor5';
+<script type="module">
+import {
+    ClassicEditor,
+    Essentials,
+    Paragraph,
+    Bold,
+    Italic,
+    Font,
+    List,
+    Indent,
+    IndentBlock
+} from 'ckeditor5';
 
-        ClassicEditor
-            .create( document.querySelector( '#description' ), {
-                licenseKey: 'GPL', // bebas, karena kamu pakai versi GPL
-                plugins: [ Essentials, Paragraph, Bold, Italic, Font ],
-                toolbar: [
-                    'undo', 'redo', '|', 'bold', 'italic', '|',
-                    'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor'
-                ]
-            } )
-            .then( editor => {
-                window.editor = editor;
-            } )
-            .catch( error => {
-                console.error( error );
-            } );
-    </script>
+ClassicEditor
+    .create(document.querySelector('#description'), {
+        licenseKey: 'GPL', // versi GPL bebas
+        plugins: [ Essentials, Paragraph, Bold, Italic, Font, List, Indent, IndentBlock ],
+        toolbar: [
+            'undo', 'redo', '|',
+            'bold', 'italic', '|',
+            'bulletedList', 'numberedList', '|',
+            'outdent', 'indent', '|',
+            'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor'
+        ],
+        fontSize: {
+            options: [ 'tiny', 'small', 'default', 'big', 'huge' ]
+        }
+    })
+    .then(editor => {
+        window.editor = editor;
+    })
+    .catch(error => {
+        console.error(error);
+    });
+</script>
+
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @if(session('success'))

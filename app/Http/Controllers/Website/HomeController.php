@@ -25,10 +25,10 @@ class HomeController extends Controller
         });
 
         $articles = Cache::remember('articles_home', 3600, function () {
-            return Article::where('status', 'published')
+            return Article::where('status', 'published', 'slug')
                 ->orderBy('published_at', 'desc')
                 ->take(3)
-                ->get(['id', 'title', 'category', 'excerpt', 'featured_image', 'published_at']);
+                ->get(['id', 'title', 'category', 'excerpt', 'featured_image', 'published_at', 'slug']);
         });
 
         return view('website.pages.home', compact(

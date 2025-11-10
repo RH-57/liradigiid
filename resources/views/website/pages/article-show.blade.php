@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ $article->meta_title ?? $article->title }} | Liradigi</title>
+  <meta name="description" content="{{ $article->meta_description ?? Str::limit(strip_tags($article->content), 160) }}">
+  <meta name="keywords" content="{{ $article->meta_keyword }}">
+  <link rel="canonical" href="{{ $article->canonical_url ?? url()->current() }}">
+  <meta name="robots" content="{{ $article->robots ?? 'index, follow' }}">
+  <meta property="og:title" content="{{ $article->og_title ?? $article->title }}">
+  <meta property="og:description" content="{{ $article->og_description ?? Str::limit(strip_tags($article->content), 150) }}">
+  <meta property="og:image" content="{{ $article->meta_image ? asset('storage/'.$article->meta_image) : asset('assets/website/img/default-article.jpg') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+
+<body class="bg-gray-50">
+  @include('website.layouts.header')
+
+  <!-- HERO / COVER -->
+  <section class="relative min-h-[50vh] flex items-center justify-center bg-gradient-to-br from-blue-600 via-blue-400 to-blue-100 pt-28 md:pt-16 overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/triangular.png')] opacity-25"></div>
+
+    <div class="relative text-center text-white px-6" data-aos="fade-down">
+      <span class="bg-[#136ad5] text-xs px-3 py-1 rounded-full uppercase tracking-wide">{{ $article->category }}</span>
+      <h1 class="text-4xl md:text-5xl font-bold mt-4 mb-3 leading-tight max-w-3xl mx-auto">{{ $article->title }}</h1>
+      <div class="flex justify-center items-center text-blue-100 text-sm space-x-3">
+        <span><i class="fa-solid fa-calendar text-yellow-300 mr-1"></i>
+          {{ $article->published_at ? $article->published_at->translatedFormat('d M Y') : $article->created_at->translatedFormat('d M Y') }}
+        </span>
+        <span><i class="fa-solid fa-eye text-yellow-300 mr-1"></i> {{ $article->views }} kali dibaca</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ISI ARTIKEL -->
+  <section class="py-20">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 bg-white shadow-lg rounded-3xl p-8 md:p-12 relative z-10" data-aos="fade-up">
+
+      {{-- Gambar Utama --}}
+      @if($article->featured_image)
+      <div class="mb-10 overflow-hidden rounded-2xl shadow-md">
+        <img src="{{ asset('storage/'.$article->featured_image) }}" alt="{{ $article->title }}" class="w-full h-auto object-cover">
+      </div>
+      @endif
+
+      {{-- Konten --}}
+      <article class="prose prose-lg max-w-none text-gray-800 leading-relaxed">
+        {!! $article->content !!}
+      </article>
+
+      {{-- Info Penulis & Share --}}
+      <div class="mt-12 border-t pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        <div class="flex items-center space-x-3">
+          <div class="bg-[#136ad5] text-white w-12 h-12 flex items-center justify-center rounded-full font-bold">
+            {{ strtoupper(substr($article->user->name ?? 'L', 0, 1)) }}
+          </div>
+          <div>
+            <p class="font-semibold text-gray-700">Ditulis oleh</p>
+            <p class="text-[#136ad5] font-bold">{{ $article->user->name ?? 'Admin Liradigi' }}</p>
+          </div>
+        </div>
+
+        {{-- Tombol Share --}}
+        <div class="flex items-center space-x-4">
+          <span class="text-gray-600 font-medium">Bagikan:</span>
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(request()->fullUrl()) }}" target="_blank" class="text-blue-600 hover:text-blue-800">
+            <i class="fab fa-facebook-f text-xl"></i>
+          </a>
+          <a href="https://twitter.com/intent/tweet?url={{ urlencode(request()->fullUrl()) }}&text={{ urlencode($article->title) }}" target="_blank" class="text-sky-500 hover:text-sky-700">
+            <i class="fab fa-x-twitter text-xl"></i>
+          </a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ urlencode(request()->fullUrl()) }}&title={{ urlencode($article->title) }}" target="_blank" class="text-blue-700 hover:text-blue-900">
+            <i class="fab fa-linkedin-in text-xl"></i>
+          </a>
+          <a href="https://wa.me/?text={{ urlencode($article->title . ' ' . request()->fullUrl()) }}" target="_blank" class="text-green-600 hover:text-green-800">
+            <i class="fab fa-whatsapp text-xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTIKEL TERKAIT -->
+  @if($relatedArticles->count())
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-gray-800 mb-10 text-center">Artikel Terkait</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        @foreach($relatedArticles as $related)
+        <div class="group bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden">
+          <div class="overflow-hidden">
+            <img src="{{ $related->featured_image ? asset('storage/'.$related->featured_image) : asset('assets/website/img/default-article.jpg') }}"
+              alt="{{ $related->title }}"
+              class="w-full h-52 object-cover transform group-hover:scale-110 transition duration-700">
+          </div>
+          <div class="p-6">
+            <a href="{{ route('web.articles.show', [$related->category, $related->slug]) }}">
+              <h3 class="text-lg font-semibold text-[#136ad5] mb-2">{{ $related->title }}</h3>
+            </a>
+            <p class="text-gray-600 text-sm line-clamp-3">{{ $related->excerpt ?? Str::limit(strip_tags($related->content), 100) }}</p>
+          </div>
+        </div>
+        @endforeach
+      </div>
+    </div>
+  </section>
+  @endif
+
+  @include('website.layouts.footer')
+</body>
+</html>

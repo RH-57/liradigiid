@@ -217,25 +217,39 @@
 </script>
 
 <script type="module">
-  import {
+import {
     ClassicEditor,
     Essentials,
     Paragraph,
     Bold,
     Italic,
-    Font
-  } from 'ckeditor5';
+    Font,
+    List,
+    Indent,
+    IndentBlock
+} from 'ckeditor5';
 
-  ClassicEditor
+ClassicEditor
     .create(document.querySelector('#description'), {
-      licenseKey: 'GPL',
-      plugins: [Essentials, Paragraph, Bold, Italic, Font],
-      toolbar: [
-        'undo', 'redo', '|', 'bold', 'italic', '|',
-        'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor'
-      ]
+        licenseKey: 'GPL', // versi GPL bebas
+        plugins: [ Essentials, Paragraph, Bold, Italic, Font, List, Indent, IndentBlock ],
+        toolbar: [
+            'undo', 'redo', '|',
+            'bold', 'italic', '|',
+            'bulletedList', 'numberedList', '|',
+            'outdent', 'indent', '|',
+            'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor'
+        ],
+        fontSize: {
+            options: [ 'tiny', 'small', 'default', 'big', 'huge' ]
+        }
     })
-    .catch(error => console.error(error));
+    .then(editor => {
+        window.editor = editor;
+    })
+    .catch(error => {
+        console.error(error);
+    });
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

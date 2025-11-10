@@ -113,6 +113,9 @@ class ArticleController extends Controller
         ]);
 
         Cache::forget('articles');
+        for ($i = 1; $i <= 20; $i++) {
+            Cache::forget("articles_page_{$i}");
+        }
 
         return redirect()->route('articles.index')->with('success', 'Artikel berhasil ditambahkan');
     }
@@ -234,6 +237,9 @@ class ArticleController extends Controller
         ]);
 
         Cache::forget('articles');
+        for ($i = 1; $i <= 20; $i++) {
+            Cache::forget("articles_page_{$i}");
+        }
 
         return redirect()->route('articles.index')->with('success', 'Artikel berhasil diperbarui');
     }
@@ -254,6 +260,9 @@ class ArticleController extends Controller
 
         $article->delete();
         Cache::forget('articles');
+        for ($i = 1; $i <= 20; $i++) {
+            Cache::forget("articles_page_{$i}");
+        }
 
         return redirect()->route('articles.index')->with('success', 'Artikel berhasil dihapus');
     }

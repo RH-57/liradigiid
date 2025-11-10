@@ -46,4 +46,28 @@ class ArticleController extends Controller
             'articles' => $data['articles'],
         ]);
     }
+
+    public function show($category, $slug)
+    {
+        $contacts = Cache::remember('contacts', 31536000, fn() => Contact::first());
+        $mediasocials = Cache::remember('mediasocials', 31536000, fn() => MediaSocial::all());
+        $article = Article::where('category', $category)
+            ->where('slug', $slug)
+            ->where('status', 'published')
+            ->firstOrFail();
+
+        // Tambah views
+        $article->increment('views');
+
+        // Ambil 3 artikel terkait
+        $relatedArticles = Article::where('category', $article->category)
+            ->where('id', '!=', $article->id)
+            ->where('status', 'published')
+            ->latest()
+            ->take(3)
+            ->get();
+
+        return view('website.pages.article-show', compact('article', 'relatedArticles', 'mediasocials', 'contacts'));
+    }
+
 }

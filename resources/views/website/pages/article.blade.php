@@ -53,7 +53,7 @@
                 {{ $highlightArticle->published_at ? $highlightArticle->published_at->translatedFormat('d M Y') : $highlightArticle->created_at->translatedFormat('d M Y') }}
               </span>
             </div>
-            <a href="" class="inline-block mt-4 bg-[#136ad5] text-white font-semibold px-5 py-2 rounded-lg hover:bg-yellow-500 transition">
+            <a href="{{ route('web.articles.show', [$highlightArticle->category, $highlightArticle->slug]) }}" class="inline-block mt-4 bg-[#136ad5] text-white font-semibold px-5 py-2 rounded-lg hover:bg-yellow-500 transition">
               Baca Selengkapnya
             </a>
           </div>
@@ -82,7 +82,7 @@
                 {{ $article->published_at ? $article->published_at->translatedFormat('d M Y') : $article->created_at->translatedFormat('d M Y') }}
               </span>
             </div>
-            <a href="" class="text-[#00a2ff] font-medium hover:underline">Baca Selengkapnya →</a>
+            <a href="{{ route('web.articles.show', [$article->category, $article->slug]) }}" class="text-[#00a2ff] font-medium hover:underline">Baca Selengkapnya →</a>
           </div>
         </div>
         @empty

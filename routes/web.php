@@ -19,6 +19,7 @@ use App\Models\Article;
 Route::get('/', [HomeController::class, 'index'])->name('web.home');
 Route::get('/portfolio', [WebsitePortfolioController::class, 'index'])->name('web.portfolios');
 Route::get('/artikel', [WebsiteArticleController::class, 'index'])->name('web.articles');
+Route::get('/artikel/{category}/{slug}', [WebsiteArticleController::class, 'show'])->name('web.articles.show');
 Route::get('/cara-order', [HowToOrderController::class, 'index'])->name('web.howtoorder');
 
 
