@@ -3,8 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{{asset('assets/website/img/favicon.ico')}}" type="image/x-icon">
   <title>Artikel & Insight | Liradigi</title>
-  <meta name="description" content="Kumpulan artikel, tips, dan insight seputar website, digital marketing, dan teknologi terbaru.">
+   <meta name="description" content="Kumpulan artikel, tips, panduan, dan insight seputar website, digital marketing, dan teknologi terbaru dari Liradigi.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ url()->current() }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Artikel & Insight | Liradigi">
+  <meta property="og:description" content="Temukan inspirasi, strategi digital, dan panduan teknologi untuk membantu bisnis Anda berkembang.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ url()->current() }}">
+  <meta property="og:image" content="{{ asset('assets/img/og/artikel.jpg') }}">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Artikel & Insight | Liradigi">
+  <meta name="twitter:description" content="Kumpulan artikel menarik tentang website dan digital marketing.">
+  <meta name="twitter:image" content="{{ asset('assets/img/og/artikel.jpg') }}">
+
+  @include('website.components.google-tag-header')
+
+  <!-- JSON-LD Structured Data -->
+  @php
+    $jsonLd = [
+      "@context" => "https://schema.org",
+      "@type" => "CollectionPage",
+      "name" => "Artikel dan Insight Liradigi",
+      "description" => "Kumpulan artikel dan insight dari Liradigi tentang website, digital marketing, dan teknologi.",
+      "publisher" => [
+        "@type" => "Organization",
+        "name" => "Liradigi",
+        "url" => url('/'),
+        "logo" => [
+          "@type" => "ImageObject",
+          "url" => asset('assets/img/logo.png')
+        ]
+      ],
+      "hasPart" => $articles->map(function($article) {
+        return [
+          "@type" => "BlogPosting",
+          "headline" => $article->title,
+          "image" => $article->featured_image
+              ? asset('storage/'.$article->featured_image)
+              : asset('assets/website/img/default-article.jpg'),
+          "url" => route('web.articles.show', [$article->category, $article->slug]),
+          "datePublished" => $article->published_at ? $article->published_at->toIso8601String() : $article->created_at->toIso8601String(),
+          "author" => [
+            "@type" => "Person",
+            "name" => $article->author->name ?? "Admin"
+          ],
+          "articleSection" => $article->category ?? "Artikel"
+        ];
+      })
+    ];
+  @endphp
+
+  <script type="application/ld+json">
+    {!! json_encode($jsonLd, JSON_UNESCAPED_SLASHES|JSON_PRETTY_PRINT) !!}
+  </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -13,7 +71,7 @@
   @include('website.layouts.header')
 
   <!-- HERO -->
-  <section class="relative min-h-[40vh] flex items-center justify-center bg-gradient-to-br from-blue-600 via-blue-400 to-blue-100 pt-28 md:pt-16 overflow-hidden">
+  <section class="relative min-h-[40vh] flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 pt-28 md:pt-16 overflow-hidden">
     <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/triangular.png')] opacity-25"></div>
     <div class="relative text-center text-white px-6" data-aos="fade-down">
       <h1 class="text-4xl md:text-5xl font-bold mb-4">Artikel & Insight</h1>
@@ -98,5 +156,6 @@
   </section>
 
   @include('website.layouts.footer')
+  @include('website.components.google-tag-body')
 </body>
 </html>

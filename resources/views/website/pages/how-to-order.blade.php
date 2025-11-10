@@ -3,8 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cara Order - ProTekno.io</title>
-  <meta name="description" content="Langkah mudah untuk memesan layanan website profesional di ProTekno.io.">
+  <link rel="icon" href="{{asset('assets/website/img/favicon.ico')}}" type="image/x-icon">
+  <title>Cara Order | Liradigi</title>
+  <meta name="description" content="Panduan lengkap cara order pembuatan website profesional di Liradigi, mulai dari konsultasi hingga website siap online.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ url()->current() }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cara Order Website | Liradigi">
+  <meta property="og:description" content="Ikuti 6 langkah mudah untuk memesan layanan pembuatan website profesional di Liradigi.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{ url()->current() }}">
+  <meta property="og:image" content="{{ asset('assets/img/og/cara-order.jpg') }}">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cara Order Website | Liradigi">
+  <meta name="twitter:description" content="Langkah-langkah order layanan pembuatan website di Liradigi.">
+  <meta name="twitter:image" content="{{ asset('assets/img/og/cara-order.jpg') }}">
+
+  @include('website.components.google-tag-header')
+
+  <!-- Schema.org JSON-LD -->
+  @php
+    $jsonLd = [
+      "@context" => "https://schema.org",
+      "@type" => "HowTo",
+      "name" => "Cara Order Website di Liradigi",
+      "description" => "Panduan langkah demi langkah untuk memesan layanan pembuatan website profesional di Liradigi.",
+      "image" => asset('assets/img/og/cara-order.jpg'),
+      "totalTime" => "P2D",
+      "supply" => [],
+      "tool" => [],
+      "step" => [
+        [
+          "@type" => "HowToStep",
+          "name" => "Konsultasi",
+          "text" => "Diskusikan kebutuhan website melalui WhatsApp atau form kontak.",
+          "url" => url()->current() . "#step1"
+        ],
+        [
+          "@type" => "HowToStep",
+          "name" => "Pilih Paket",
+          "text" => "Pilih paket website yang sesuai dengan anggaran Anda.",
+          "url" => url()->current() . "#step2"
+        ],
+        [
+          "@type" => "HowToStep",
+          "name" => "Pembayaran DP",
+          "text" => "Lakukan pembayaran DP untuk memulai proses pembuatan.",
+          "url" => url()->current() . "#step3"
+        ],
+        [
+          "@type" => "HowToStep",
+          "name" => "Pengerjaan Website",
+          "text" => "Tim kami mulai mengerjakan desain dan struktur website Anda.",
+          "url" => url()->current() . "#step4"
+        ],
+        [
+          "@type" => "HowToStep",
+          "name" => "Review & Revisi",
+          "text" => "Anda dapat melakukan review dan memberikan revisi sebelum finalisasi.",
+          "url" => url()->current() . "#step5"
+        ],
+        [
+          "@type" => "HowToStep",
+          "name" => "Website Online",
+          "text" => "Website dipublikasikan dan siap digunakan.",
+          "url" => url()->current() . "#step6"
+        ]
+      ],
+      "publisher" => [
+        "@type" => "Organization",
+        "name" => "Liradigi",
+        "url" => url('/'),
+        "logo" => [
+          "@type" => "ImageObject",
+          "url" => asset('assets/img/logo.png')
+        ]
+      ]
+    ];
+  @endphp
+
+  <script type="application/ld+json">
+    {!! json_encode($jsonLd, JSON_UNESCAPED_SLASHES|JSON_PRETTY_PRINT) !!}
+  </script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
   @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -14,7 +99,7 @@
   @include('website.layouts.header')
 
   <!-- HERO SECTION -->
-  <section class="relative min-h-[40vh] flex items-center justify-center bg-gradient-to-br from-blue-600 via-blue-400 to-blue-100 pt-28 md:pt-16 overflow-hidden">
+  <section class="relative min-h-[40vh] flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 pt-28 md:pt-16 overflow-hidden">
     <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/triangular.png')] opacity-25"></div>
     <div class="relative text-center text-white px-6" data-aos="fade-down">
       <h1 class="text-4xl md:text-5xl font-bold mb-4">Cara Order Layanan</h1>
@@ -90,6 +175,7 @@
   </section>
 
   @include('website.layouts.footer')
+  @include('website.components.google-tag-body')
 
 </body>
 </html>

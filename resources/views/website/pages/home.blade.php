@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{asset('assets/website/img/favicon.ico')}}" type="image/x-icon">
     <title>Liradigi - Jasa Pembuatan Website Profesional & Cepat untuk Bisnis Anda</title>
     <meta name="description" content="Liradigi adalah digital agency yang membantu bisnis Anda tampil unggul di dunia digital melalui pembuatan website profesional, cepat, dan SEO-friendly.">
     <meta name="keywords" content="Liradigi, jasa pembuatan website, digital agency, web design, website UMKM, web instansi, jasa buat website murah, SEO website">
@@ -33,11 +34,14 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
+    @include('website.components.google-tag-header')
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
 </head>
 <body>
     @include('website.layouts.header')
-    <section class="relative min-h-screen flex items-center bg-gradient-to-br from-blue-600 via-blue-400 to-blue-100 pt-28 md:pt-16 pb-10 overflow-hidden">
+    <section class="relative min-h-screen flex items-center bg-gradient-to-br from-blue-600 to-blue-400 pt-28 md:pt-16 pb-10 overflow-hidden">
 
         <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/triangular.png')] opacity-25"></div>
 
@@ -91,7 +95,7 @@
             <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
 
                 <!-- Card 1 -->
-                <div class="p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition bg-gradient-to-b from-blue-50 to-white"
+                <div class="p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition bg-gradient-to-b from-blue-300 to-blue-50"
                     data-aos="zoom-in" data-aos-delay="100">
                     <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
                         <i class="fa-solid fa-palette text-white text-2xl sm:text-3xl"></i>
@@ -103,7 +107,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition bg-gradient-to-b from-blue-50 to-white"
+                <div class="p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition bg-gradient-to-b from-blue-300 to-blue-50"
                     data-aos="zoom-in" data-aos-delay="200">
                     <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
                         <i class="fa-solid fa-bolt text-white text-2xl sm:text-3xl"></i>
@@ -115,7 +119,7 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition bg-gradient-to-b from-blue-50 to-white"
+                <div class="p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition bg-gradient-to-b from-blue-300 to-blue-50"
                     data-aos="zoom-in" data-aos-delay="300">
                     <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
                         <i class="fa-solid fa-headset text-white text-2xl sm:text-3xl"></i>
@@ -127,7 +131,7 @@
                 </div>
 
                 <!-- Card 4 -->
-                <div class="p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition bg-gradient-to-b from-blue-50 to-white"
+                <div class="p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition bg-gradient-to-b from-blue-300 to-blue-50"
                     data-aos="zoom-in" data-aos-delay="400">
                     <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
                         <i class="fa-solid fa-users text-white text-2xl sm:text-3xl"></i>
@@ -404,6 +408,7 @@
 
     @include('website.layouts.whatsapp')
     @include('website.layouts.footer')
+    @include('website.components.google-tag-body')
 
     </body>
     </html>

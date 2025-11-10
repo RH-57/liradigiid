@@ -3,14 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{{asset('assets/website/img/favicon.ico')}}" type="image/x-icon">
   <title>{{ $article->meta_title ?? $article->title }} | Liradigi</title>
+
+  <!-- Meta SEO -->
   <meta name="description" content="{{ $article->meta_description ?? Str::limit(strip_tags($article->content), 160) }}">
   <meta name="keywords" content="{{ $article->meta_keyword }}">
   <link rel="canonical" href="{{ $article->canonical_url ?? url()->current() }}">
   <meta name="robots" content="{{ $article->robots ?? 'index, follow' }}">
+
+  <!-- Open Graph / Facebook -->
   <meta property="og:title" content="{{ $article->og_title ?? $article->title }}">
   <meta property="og:description" content="{{ $article->og_description ?? Str::limit(strip_tags($article->content), 150) }}">
   <meta property="og:image" content="{{ $article->meta_image ? asset('storage/'.$article->meta_image) : asset('assets/website/img/default-article.jpg') }}">
+  <meta property="og:url" content="{{ url()->current() }}">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Liradigi">
+
+  <!-- Open Graph Article Metadata -->
+  <meta property="article:published_time" content="{{ optional($article->published_at ?? $article->created_at)->toIso8601String() }}">
+  <meta property="article:modified_time" content="{{ optional($article->updated_at)->toIso8601String() }}">
+  <meta property="article:author" content="{{ $article->user->name ?? 'Admin Liradigi' }}">
+  <meta property="article:section" content="{{ $article->category }}">
+  <meta property="article:tag" content="{{ $article->meta_keyword }}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ $article->meta_title ?? $article->title }}">
+  <meta name="twitter:description" content="{{ $article->meta_description ?? Str::limit(strip_tags($article->content), 150) }}">
+  <meta name="twitter:image" content="{{ $article->meta_image ? asset('storage/'.$article->meta_image) : asset('assets/website/img/default-article.jpg') }}">
+
+  @include('website.components.google-tag-header')
+
+  {{-- masukkan di <head> --}}
+    @php
+    $schema = [
+    '@context' => 'https://schema.org',
+    '@type' => 'Article',
+
+    'mainEntityOfPage' => [
+        '@type' => 'WebPage',
+        '@id' => url()->current(),
+    ],
+
+    'headline' => $article->meta_title ?? $article->title,
+    'description' => strip_tags(Str::limit($article->meta_description ?? $article->content, 160)),
+
+    'image' => [
+        $article->meta_image
+        ? asset('storage/'.$article->meta_image)
+        : asset('assets/website/img/default-article.jpg')
+    ],
+
+    'datePublished' => ($article->published_at ?? $article->created_at)->toIso8601String(),
+    'dateModified' => ($article->updated_at ?? $article->published_at ?? $article->created_at)->toIso8601String(),
+
+    'author' => [
+        '@type' => 'Person',
+        'name' => $article->user->name ?? 'Admin Liradigi',
+    ],
+
+    'publisher' => [
+        '@type' => 'Organization',
+        'name' => 'Liradigi',
+        'url' => url('/'),
+        'logo' => [
+        '@type' => 'ImageObject',
+        'url' => asset('assets/website/img/logo.png'),
+        ],
+    ],
+
+    'articleSection' => $article->category ?? 'Artikel',
+    'keywords' => $article->meta_keyword,
+    'interactionStatistic' => [
+        '@type' => 'InteractionCounter',
+        'interactionType' => [
+        '@type' => 'http://schema.org/ViewAction'
+        ],
+        'userInteractionCount' => (int) $article->views,
+    ],
+    'isAccessibleForFree' => true,
+    'wordCount' => str_word_count(strip_tags($article->content)),
+    ];
+    @endphp
+
+    <script type="application/ld+json">
+    {!! json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+    </script>
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -19,13 +100,15 @@
   @include('website.layouts.header')
 
   <!-- HERO / COVER -->
-  <section class="relative min-h-[50vh] flex items-center justify-center bg-gradient-to-br from-blue-600 via-blue-400 to-blue-100 pt-28 md:pt-16 overflow-hidden">
+  <section class="relative min-h-[50vh] flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 pt-28 md:pt-16 overflow-hidden">
     <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/triangular.png')] opacity-25"></div>
 
     <div class="relative text-center text-white px-6" data-aos="fade-down">
-      <span class="bg-[#136ad5] text-xs px-3 py-1 rounded-full uppercase tracking-wide">{{ $article->category }}</span>
       <h1 class="text-4xl md:text-5xl font-bold mt-4 mb-3 leading-tight max-w-3xl mx-auto">{{ $article->title }}</h1>
       <div class="flex justify-center items-center text-blue-100 text-sm space-x-3">
+        <span><i class="fa-solid fa-tags text-yellow-300 mr-1"></i>
+          {{ $article->category }}
+        </span>
         <span><i class="fa-solid fa-calendar text-yellow-300 mr-1"></i>
           {{ $article->published_at ? $article->published_at->translatedFormat('d M Y') : $article->created_at->translatedFormat('d M Y') }}
         </span>
@@ -109,5 +192,6 @@
   @endif
 
   @include('website.layouts.footer')
+  @include('website.components.google-tag-body')
 </body>
 </html>

@@ -3,9 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{{asset('assets/website/img/favicon.ico')}}" type="image/x-icon">
   <title>Portfolio | Liradigi</title>
-  <meta name="description" content="Lihat berbagai project website yang telah kami selesaikan di Liradigi.">
+  <meta name="description" content="Kumpulan project website profesional yang telah dikerjakan Liradigi untuk berbagai bisnis dan industri. Lihat hasil karya terbaik kami.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ url()->current() }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Portfolio Website | Liradigi">
+  <meta property="og:description" content="Lihat berbagai project website terbaik yang telah kami kerjakan untuk berbagai klien.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ url()->current() }}">
+  <meta property="og:image" content="{{ asset('assets/img/og/portfolio-og.jpg') }}">
+
+   <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Portfolio Website | Liradigi">
+  <meta name="twitter:description" content="Lihat berbagai project website terbaik yang telah kami selesaikan.">
+  <meta name="twitter:image" content="{{ asset('assets/img/og/portfolio-og.jpg') }}">
+
+   @php
+    $jsonLd = [
+        "@context" => "https://schema.org",
+        "@type" => "CollectionPage",
+        "name" => "Portfolio Website Liradigi",
+        "description" => "Kumpulan project website profesional dari Liradigi.",
+        "url" => url()->current(),
+        "publisher" => [
+        "@type" => "Organization",
+        "name" => "Liradigi",
+        "url" => url('/'),
+        "logo" => [
+            "@type" => "ImageObject",
+            "url" => asset('assets/img/logo.png')
+        ]
+        ],
+        "mainEntity" => $portfolios->map(function($item) {
+        return [
+            "@type" => "CreativeWork",
+            "name" => $item->name,
+            "image" => asset('storage/' . $item->image),
+            "url" => $item->url
+        ];
+        })
+    ];
+    @endphp
+    <script type="application/ld+json">
+    {!! json_encode($jsonLd, JSON_UNESCAPED_SLASHES|JSON_PRETTY_PRINT) !!}
+    </script>
+
+    @include('website.components.google-tag-header')
 
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -14,7 +63,7 @@
   @include('website.layouts.header')
 
   <!-- HERO SECTION -->
-  <section class="relative min-h-[40vh] flex items-center justify-center bg-gradient-to-br from-blue-600 via-blue-400 to-blue-100 pt-28 md:pt-16 overflow-hidden">
+  <section class="relative min-h-[40vh] flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 pt-28 md:pt-16 overflow-hidden">
     <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/triangular.png')] opacity-25"></div>
     <div class="relative text-center text-white px-6" data-aos="fade-down">
       <h1 class="text-4xl md:text-5xl font-bold mb-4">Portfolio Kami</h1>
@@ -49,5 +98,6 @@
   @include('website.components.cta')
 
   @include('website.layouts.footer')
+  @include('website.components.google-tag-body')
 </body>
 </html>
