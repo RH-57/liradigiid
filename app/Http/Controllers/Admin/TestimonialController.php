@@ -64,7 +64,7 @@ class TestimonialController extends Controller
             'photo'   => $photoPath,
         ]);
 
-        Cache::forget('testimonials');
+        Cache::forget('testimonials', 'testimonials_home');
 
         return redirect()->route('testimonials.index')->with('success', 'Testimonial berhasil ditambahkan.');
     }
@@ -131,7 +131,7 @@ class TestimonialController extends Controller
         }
 
         $testimonial->delete();
-        Cache::forget('testimonials');
+        Cache::forget('testimonials', 'testimonials_home');
 
         return redirect()->route('testimonials.index')->with('success', 'Testimonial berhasil dihapus.');
     }
