@@ -7,6 +7,7 @@ use App\Models\Article;
 use App\Models\Contact;
 use App\Models\MediaSocial;
 use App\Models\Portfolio;
+use App\Models\Service;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
@@ -14,6 +15,10 @@ use Illuminate\Support\Facades\Cache;
 class HomeController extends Controller
 {
     public function index() {
+        $services = Cache::remember('services', 31536000, function() {
+            return Service::get();
+        });
+
         $contacts = Cache::remember('contacts', 31536000, function () {
             return Contact::first();
         });
@@ -45,6 +50,7 @@ class HomeController extends Controller
             'portfolios',
             'articles',
             'testimonials',
+            'services',
         ));
     }
 }

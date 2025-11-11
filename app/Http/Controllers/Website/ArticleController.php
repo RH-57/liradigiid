@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Article;
 use App\Models\Contact;
 use App\Models\MediaSocial;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 
@@ -14,6 +15,9 @@ class ArticleController extends Controller
     public function index(Request $request)
     {
         // Cache untuk data statis
+        $services = Cache::remember('services', 31536000, function() {
+            return Service::get();
+        });
         $contacts = Cache::remember('contacts', 31536000, fn() => Contact::first());
         $mediasocials = Cache::remember('mediasocials', 31536000, fn() => MediaSocial::all());
 
@@ -40,6 +44,7 @@ class ArticleController extends Controller
         });
 
         return view('website.pages.article', [
+            'services' => $services,
             'contacts' => $contacts,
             'mediasocials' => $mediasocials,
             'highlightArticle' => $data['highlightArticle'],
@@ -49,6 +54,9 @@ class ArticleController extends Controller
 
     public function show($category, $slug)
     {
+        $services = Cache::remember('services', 31536000, function() {
+            return Service::get();
+        });
         $contacts = Cache::remember('contacts', 31536000, fn() => Contact::first());
         $mediasocials = Cache::remember('mediasocials', 31536000, fn() => MediaSocial::all());
         $article = Article::where('category', $category)
@@ -67,7 +75,7 @@ class ArticleController extends Controller
             ->take(3)
             ->get();
 
-        return view('website.pages.article-show', compact('article', 'relatedArticles', 'mediasocials', 'contacts'));
+        return view('website.pages.article-show', compact('article', 'relatedArticles', 'mediasocials', 'contacts', 'services'));
     }
 
 }

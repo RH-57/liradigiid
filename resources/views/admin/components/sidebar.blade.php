@@ -47,9 +47,21 @@
                 </a>
             </li><!-- End Profile Page Nav -->
             <li class="nav-item">
+                <a class="nav-link collapsed" href="{{route('faqs.index')}}">
+                    <i class="bi bi-circle"></i>
+                    <span>FAQs</span>
+                </a>
+            </li><!-- End Profile Page Nav -->
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="{{route('portfolios.index')}}">
                     <i class="bi bi-circle"></i>
                     <span>Portfolios</span>
+                </a>
+            </li><!-- End Profile Page Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{{route('services.index')}}">
+                    <i class="bi bi-circle"></i>
+                    <span>Services</span>
                 </a>
             </li><!-- End Profile Page Nav -->
             <li class="nav-item">

@@ -1,5 +1,5 @@
 <!-- Floating WhatsApp Button -->
-<a href="https://wa.me/6281234567890"
+<a href="https://wa.me/{{$contacts->phone}}"
    target="_blank"
    class="fixed bottom-6 right-6 z-50 group">
     <!-- Ripple Effect (Ombak) -->

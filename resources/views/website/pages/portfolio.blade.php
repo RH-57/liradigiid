@@ -87,7 +87,7 @@
           </div>
           <div class="p-6 text-center">
             <h3 class="text-xl font-semibold text-[#136ad5] mb-1">{{$portfolio->name}}</h3>
-            <a href="{{$portfolio->url}}"><p class="text-gray-600 text-sm">{{$portfolio->url}}</p></a>
+            <a href="{{$portfolio->url}}" target="_blank"><p class="text-gray-600 text-sm">{{$portfolio->url}}</p></a>
           </div>
         </div>
         @endforeach
@@ -96,7 +96,7 @@
   </section>
 
   @include('website.components.cta')
-
+@include('website.layouts.whatsapp')
   @include('website.layouts.footer')
   @include('website.components.google-tag-body')
 </body>

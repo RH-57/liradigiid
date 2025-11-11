@@ -174,6 +174,7 @@
     </div>
   </section>
 
+  @include('website.layouts.whatsapp')
   @include('website.layouts.footer')
   @include('website.components.google-tag-body')
 

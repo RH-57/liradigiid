@@ -32,9 +32,9 @@
             class="absolute top-full mt-2 bg-white rounded-xl shadow-lg py-2 w-48 text-gray-700"
             @click.away="dropdown = false"
           >
-            <a href="{{ url('/paket/basic') }}" class="block px-4 py-2 hover:bg-gray-100">Paket Basic</a>
-            <a href="{{ url('/paket/professional') }}" class="block px-4 py-2 hover:bg-gray-100">Paket Professional</a>
-            <a href="{{ url('/paket/custom') }}" class="block px-4 py-2 hover:bg-gray-100">Paket Custom</a>
+          @foreach($services as $service)
+            <a href="{{ route('web.service.detail', $service->slug) }}" class="block px-4 py-2 hover:bg-gray-100">{{$service->name}}</a>
+            @endforeach
           </div>
         </div>
 
