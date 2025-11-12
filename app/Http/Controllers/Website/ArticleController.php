@@ -33,7 +33,8 @@ class ArticleController extends Controller
                 $highlightArticle = Article::orderByDesc('created_at')->first();
             }
 
-            $articles = Article::where('id', '!=', optional($highlightArticle)->id)
+            $articles = Article::where('status', 'published')
+                ->where('id', '!=', optional($highlightArticle)->id)
                 ->orderByDesc('created_at')
                 ->paginate(3);
 
