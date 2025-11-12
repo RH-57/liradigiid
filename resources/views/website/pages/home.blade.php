@@ -148,103 +148,95 @@
 
     <!-- Section: Harga Paket -->
     <section class="relative py-20 bg-gray-50 overflow-hidden" id="harga-paket">
-    <!-- Background dots -->
-       <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/triangular.png')] opacity-35"></div>
-
+        <!-- Background dots -->
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/triangular.png')] opacity-35"></div>
 
         <div class="relative max-w-7xl mx-auto px-6 lg:px-8 text-center">
-
             <!-- Heading -->
             <div class="mb-14" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#136ad5] mb-3">Paket Website</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#136ad5] mb-3">Paket {{ $service->name }}</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">
-                    Pilih paket sesuai kebutuhan bisnis Anda. Semua paket sudah termasuk domain, hosting, dan SSL gratis!
+                    Pilih paket terbaik sesuai kebutuhan layanan {{ strtolower($service->name) }} Anda.
                 </p>
             </div>
 
-            <!-- Cards -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center max-w-fit mx-auto">
-                <!-- Paket 2 -->
-                <div class="bg-white rounded-3xl shadow-md hover:shadow-xl transition p-8 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
-                    <div>
-                    <div class="mb-6">
-                        <i class="fa-solid fa-shirt text-5xl text-[#136ad5] mb-4"></i>
-                        <h3 class="text-xl font-semibold text-gray-800">Basic</h3>
-                        <p class="text-gray-500 text-sm">Katalog produk UMKM, herbal, atau kerajinan</p>
-                    </div>
-                    <div class="text-sm text-gray-600 mb-2 font-semibold">Start From :</div>
-                    <div class="text-gray-500 line-through text-sm">Rp 1.500.000</div>
-                    <span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">Diskon 33%</span>
-                    <h4 class="text-[#136ad5] text-4xl font-extrabold mb-4">Rp 1 Juta</h4>
-                    </div>
-                    <ul class="text-sm text-gray-600 space-y-2 text-left border-t border-gray-200 pt-4">
-                        <li><i class="fa-solid fa-check text-[#136ad5] mr-2"></i> Free Domain <span class="text-gray-400">(.com / .my.id)</span></li>
-                        <li><i class="fa-solid fa-check text-[#136ad5] mr-2"></i> SSL / HTTPS Gratis</li>
-                        <li><i class="fa-solid fa-check text-[#136ad5] mr-2"></i> Hosting Included</li>
-                        <li><i class="fa-solid fa-check text-[#136ad5] mr-2"></i> Desain Responsive</li>
-                        <li><i class="fa-solid fa-check text-[#136ad5] mr-2"></i> Fitur Chat WhatsApp</li>
-                    </ul>
-                    <a href="#hubungi" class="inline-block mt-6 bg-[#136ad5] text-white font-semibold px-5 py-2 rounded-lg hover:bg-yellow-500 hover:text-white transition">
-                        Diskusi Sekarang
-                    </a>
-                </div>
+                @foreach($service->packages as $package)
+                    @php
+                        $isPopular = $package->is_popular == 1;
+                    @endphp
 
-                <!-- Paket 3 -->
-                <div class="relative bg-white rounded-3xl shadow-xl ring-2 ring-[#136ad5] scale-105 transition transform hover:scale-110 flex flex-col justify-between p-8" data-aos="fade-up" data-aos-delay="300">
-                    <!-- Badge Popular -->
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#136ad5] text-white text-xs uppercase font-bold px-4 py-1 rounded-full shadow-lg tracking-wide">
-                    <i class="fa-solid fa-star mr-1 text-yellow-300"></i> Popular
-                    </div>
+                    <div class="{{ $isPopular
+                        ? 'relative bg-white rounded-3xl shadow-xl ring-2 ring-[#136ad5] scale-105 transition transform hover:scale-110 flex flex-col justify-between p-8'
+                        : 'relative bg-white rounded-3xl shadow-md hover:shadow-xl transition p-8 flex flex-col justify-between'
+                    }}"
+                    data-aos="fade-up"
+                    data-aos-delay="{{ 200 + ($loop->iteration * 100) }}">
 
-                    <div>
-                    <div class="mb-6">
-                        <i class="fa-solid fa-school text-5xl text-[#136ad5] mb-4"></i>
-                        <h3 class="text-xl font-semibold text-gray-800">Professional</h3>
-                        <p class="text-gray-500 text-sm">Website instansi, dinas, atau lembaga pendidikan</p>
-                    </div>
-                    <div class="text-sm text-gray-600 mb-2 font-semibold">Start From :</div>
-                    <div class="text-gray-500 line-through text-sm">Rp 3.000.000</div>
-                    <span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">Diskon 33%</span>
-                    <h4 class="text-[#136ad5] text-4xl font-extrabold mb-4">Rp 2 Juta</h4>
-                    </div>
-                    <ul class="text-sm text-gray-600 space-y-2 text-left border-t border-gray-200 pt-4">
-                        <li><i class="fa-solid fa-check text-[#136ad5] mr-2"></i> Free Domain <span class="text-gray-400">(.com / .my.id)</span></li>
-                        <li><i class="fa-solid fa-check text-[#136ad5] mr-2"></i> SSL / HTTPS Gratis</li>
-                        <li><i class="fa-solid fa-check text-[#136ad5] mr-2"></i> Hosting Included</li>
-                        <li><i class="fa-solid fa-check text-[#136ad5] mr-2"></i> Desain Responsive</li>
-                        <li><i class="fa-solid fa-check text-[#136ad5] mr-2"></i> Fitur Chat WhatsApp</li>
-                    </ul>
-                    <a href="#hubungi" class="inline-block mt-6 bg-[#136ad5] text-white font-semibold px-5 py-2 rounded-lg hover:bg-yellow-500 hover:text-white transition">
-                        Diskusi Sekarang
-                    </a>
-                </div>
+                        {{-- Badge Popular --}}
+                        @if($isPopular)
+                            <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#136ad5] text-white text-xs uppercase font-bold px-4 py-1 rounded-full shadow-lg tracking-wide">
+                                <i class="fa-solid fa-star mr-1 text-yellow-300"></i> Popular
+                            </div>
+                        @endif
 
-                <!-- Paket 4 -->
-                <div class="bg-white rounded-3xl shadow-md hover:shadow-xl transition p-8 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="400">
-                    <div>
-                    <div class="mb-6">
-                        <i class="fa-solid fa-laptop-code text-5xl text-[#136ad5] mb-4"></i>
-                        <h3 class="text-xl font-semibold text-gray-800">Custom</h3>
-                        <p class="text-gray-500 text-sm">Website profesional dan sistem informasi khusus</p>
-                    </div>
-                    <div class="text-sm text-gray-600 mb-2 font-semibold">Start From :</div>
-                    <div class="text-gray-500 line-through text-sm">Rp 6.000.000</div>
-                    <span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">Diskon 33%</span>
-                    <h4 class="text-[#136ad5] text-4xl font-extrabold mb-4">Rp 4 Juta</h4>
-                    </div>
-                    <ul class="text-sm text-gray-600 space-y-2 text-left border-t border-gray-200 pt-4">
-                        <li><i class="fa-solid fa-check text-[#136ad5] mr-2"></i> Free Domain <span class="text-gray-400">(.com / .my.id)</span></li>
-                        <li><i class="fa-solid fa-check text-[#136ad5] mr-2"></i> SSL / HTTPS Gratis</li>
-                        <li><i class="fa-solid fa-check text-[#136ad5] mr-2"></i> Hosting Included</li>
-                        <li><i class="fa-solid fa-check text-[#136ad5] mr-2"></i> Desain Responsive</li>
-                        <li><i class="fa-solid fa-check text-[#136ad5] mr-2"></i> Fitur Chat WhatsApp</li>
-                    </ul>
-                    <a href="#hubungi" class="inline-block mt-6 bg-[#136ad5] text-white font-semibold px-5 py-2 rounded-lg hover:bg-yellow-500 hover:text-white transition">
-                        Diskusi Sekarang
-                    </a>
-                </div>
+                        <div>
+                            <div class="mb-6">
+                                {{-- Icon dinamis berdasarkan urutan --}}
+                                @if($loop->iteration == 1)
+                                    <i class="fa-solid fa-shirt text-5xl text-[#136ad5] mb-4"></i>
+                                @elseif($loop->iteration == 2)
+                                    <i class="fa-solid fa-school text-5xl text-[#136ad5] mb-4"></i>
+                                @else
+                                    <i class="fa-solid fa-laptop-code text-5xl text-[#136ad5] mb-4"></i>
+                                @endif
 
+                                <h3 class="text-xl font-semibold text-gray-800">{{ $package->name }}</h3>
+                                <p class="text-gray-500 text-sm">{!! $package->description !!}</p>
+                            </div>
+
+                            {{-- Harga --}}
+                            <div class="text-sm text-gray-600 mb-2 font-semibold">Start From :</div>
+                            @if($package->original_price)
+                                <div class="text-gray-500 line-through text-sm">
+                                    Rp {{ number_format($package->original_price, 0, ',', '.') }}
+                                </div>
+                                <span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">
+                                    Diskon {{ $package->discount }}%
+                                </span>
+                            @endif
+                            <h4 class="text-[#136ad5] text-4xl font-extrabold mb-4">
+                                Rp {{ number_format($package->price, 0, ',', '.') }}
+                            </h4>
+                        </div>
+
+                        {{-- Includes --}}
+                        @if($package->includes->count())
+                            <ul class="text-sm text-gray-600 space-y-2 text-left border-t border-gray-200 pt-4">
+                                @foreach($package->includes as $inc)
+                                    <li><i class="fa-solid fa-check text-[#136ad5] mr-2"></i>{{ $inc->feature }}</li>
+                                @endforeach
+                            </ul>
+                        @endif
+
+                        {{-- Excludes --}}
+                        @if($package->excludes->count())
+                            <ul class="text-sm text-gray-500 space-y-2 text-left border-t border-gray-100 pt-3 mt-3">
+                                @foreach($package->excludes as $exc)
+                                    <li><i class="fa-solid fa-xmark text-red-500 mr-2"></i>{{ $exc->feature }}</li>
+                                @endforeach
+                            </ul>
+                        @endif
+
+                        <a href="{{ url('/cara-order') }}"
+                        class="inline-block mt-6 bg-[#136ad5] text-white font-semibold px-5 py-2 rounded-lg hover:bg-yellow-500 hover:text-white transition">
+                            Diskusi Sekarang
+                        </a>
+                    </div>
+                @endforeach
             </div>
+
+
         </div>
     </section>
 

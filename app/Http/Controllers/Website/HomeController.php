@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Article;
 use App\Models\Contact;
 use App\Models\MediaSocial;
+use App\Models\Package;
 use App\Models\Portfolio;
 use App\Models\Service;
 use App\Models\Testimonial;
@@ -44,6 +45,12 @@ class HomeController extends Controller
                 ->get();
         });
 
+         $service = Cache::remember('service_1_with_packages', 3600, function () {
+            return Service::with(['packages' => function ($q) {
+                $q->where('status', 'active');
+            }])->find(1);
+        });
+
         return view('website.pages.home', compact(
             'contacts',
             'mediasocials',
@@ -51,6 +58,7 @@ class HomeController extends Controller
             'articles',
             'testimonials',
             'services',
+            'service'
         ));
     }
 }

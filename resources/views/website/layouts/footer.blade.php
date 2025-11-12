@@ -38,11 +38,9 @@
       <div>
         <h4 class="text-lg font-semibold mb-4 text-white">Layanan Kami</h4>
         <ul class="space-y-2 text-blue-100">
-          <li><i class="fa-solid fa-circle-check mr-2 text-yellow-400"></i>Website UMKM</li>
-          <li><i class="fa-solid fa-circle-check mr-2 text-yellow-400"></i>Company Profile</li>
-          <li><i class="fa-solid fa-circle-check mr-2 text-yellow-400"></i>Website Sekolah</li>
-          <li><i class="fa-solid fa-circle-check mr-2 text-yellow-400"></i>Toko Online</li>
-          <li><i class="fa-solid fa-circle-check mr-2 text-yellow-400"></i>Sistem Informasi</li>
+        @foreach($services as $service)
+          <li><i class="fa-solid fa-circle-check mr-2 text-yellow-500"></i><a href="{{ route('web.service.detail', $service->slug) }}">{{$service->name}}</a></li>
+          @endforeach
         </ul>
       </div>
 
@@ -50,10 +48,17 @@
       <div>
         <h4 class="text-lg font-semibold mb-4 text-white">Hubungi Kami</h4>
         <ul class="space-y-3 text-blue-100 text-sm">
-          <li><i class="fa-solid fa-location-dot text-yellow-400 mr-2"></i>{{$contacts->address}}</li>
-          <li><i class="fa-solid fa-phone text-yellow-400 mr-2"></i>+{{$contacts->phone}}</li>
-          <li><i class="fa-solid fa-envelope text-yellow-400 mr-2"></i>{{$contacts->email}}</li>
-          <li><i class="fa-brands fa-whatsapp text-yellow-400 mr-2"></i>Chat via WhatsApp</li>
+          <li><i class="fa-solid fa-location-dot text-yellow-500 mr-2"></i>{{$contacts->address}}</li>
+          <li><i class="fa-solid fa-phone text-yellow-500 mr-2"></i>+{{$contacts->phone}}</li>
+          <li><i class="fa-solid fa-envelope text-yellow-500 mr-2"></i>{{$contacts->email}}</li>
+          <li class="flex items-center">
+            <i class="fa-brands fa-whatsapp text-yellow-500 mr-2"></i>
+            <a href="" target="_blank">Chat via WhatsApp</a>
+            <span class="ml-2 bg-yellow-500/10 text-yellow-400 text-xs font-semibold px-2 py-0.5 rounded-full animate-pulse">
+                Online
+            </span>
+            </li>
+
         </ul>
       </div>
     </div>

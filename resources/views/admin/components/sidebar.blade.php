@@ -16,12 +16,6 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li class="nav-item">
-            <a class="nav-link collapsed" href="">
-                <i class="bi bi-gear"></i>
-                <span>Backup Database (.sql)</span>
-            </a>
-            </li>
-          <li class="nav-item">
             <a class="nav-link collapsed" href="{{route('contacts.index')}}">
                 <i class="bi bi-gear"></i>
                 <span>Contacts</span>
