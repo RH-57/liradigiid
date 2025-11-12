@@ -10,8 +10,14 @@ class Visitor extends Model
     use HasFactory;
 
     protected $fillable = [
-        'ip_addess',
+        'ip_address',
         'user_agent',
         'visit_date',
     ];
+
+    protected $casts = [
+        'visit_date' => 'datetime',
+    ];
+
+    public $timestamps = false;
 }
