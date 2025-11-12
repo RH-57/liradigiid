@@ -14,7 +14,7 @@ class SitemapController extends Controller
     {
         // Lokasi penyimpanan ke public_html
         //$sitemapPath = base_path('../public_html/sitemap.xml');
-        $sitemapPath = base_path('/public_html/sitemap.xml');
+        $sitemapPath = base_path('../public_html/sitemap.xml');
 
         // Buat instance sitemap baru
         $sitemap = Sitemap::create()
