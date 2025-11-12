@@ -229,7 +229,7 @@
                             </ul>
                         @endif
 
-                        <a href="{{ url('/cara-order') }}"
+                        <a href="https://wa.me/{{ $contacts->phone }}?text={{ rawurlencode('Halo Liradigi, saya tertarik dengan paket ' . $package->name . '. Bisa minta informasi lebih lanjut?') }}" target="_blank"
                         class="inline-block mt-6 bg-[#136ad5] text-white font-semibold px-5 py-2 rounded-lg hover:bg-yellow-500 hover:text-white transition">
                             Diskusi Sekarang
                         </a>
