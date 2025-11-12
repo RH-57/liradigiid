@@ -61,6 +61,9 @@ Route::get('/sitemap.xml', function () {
     return response()->file(public_path('sitemap.xml'));
 });
 
+use App\Http\Controllers\SitemapController;
+
+Route::get('/generate-sitemap', [SitemapController::class, 'generate'])->name('sitemap.generate');
 Route::get('/manage-cms', [AuthController::class, 'showLoginForm'])->name('manage');
 Route::post('/manage-cms', [AuthController::class, 'login'])->name('manage.attempt')->middleware('throttle:login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
