@@ -120,7 +120,7 @@
 
   <!-- ISI ARTIKEL -->
   <section class="py-20">
-    <div class="max-w-4xl mx-auto px-6 lg:px-8 bg-white shadow-lg rounded-3xl p-8 md:p-12 relative z-10" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto px-6 lg:px-8 bg-white shadow-lg rounded-3xl p-8 md:p-12 relative z-10" data-aos="fade-up">
 
       {{-- Gambar Utama --}}
       @if($article->featured_image)
