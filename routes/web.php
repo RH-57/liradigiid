@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Website\ArticleController as WebsiteArticleController;
 use App\Http\Controllers\Website\HomeController;
 use App\Http\Controllers\Website\HowToOrderController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\Website\PortfolioController as WebsitePortfolioController;
 use App\Http\Controllers\Website\ServiceController as WebsiteServiceController;
 use Illuminate\Support\Facades\Route;
@@ -61,9 +62,7 @@ Route::get('/sitemap.xml', function () {
     return response()->file(public_path('sitemap.xml'));
 });
 
-use App\Http\Controllers\SitemapController;
 
-Route::get('/generate-sitemap', [SitemapController::class, 'generate'])->name('sitemap.generate');
 Route::get('/manage-cms', [AuthController::class, 'showLoginForm'])->name('manage');
 Route::post('/manage-cms', [AuthController::class, 'login'])->name('manage.attempt')->middleware('throttle:login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
@@ -76,6 +75,7 @@ Route::get('/cara-order', [HowToOrderController::class, 'index'])->name('web.how
 Route::get('/{slug}', [WebsiteServiceController::class, 'show'])->name('web.service.detail');
 
 Route::middleware('auth')->prefix('admin')->group(function () {
+    Route::get('/generate-sitemap', [SitemapController::class, 'generate'])->name('sitemap.generate');
     Route::get('/dashboards', [DashboardController::class, 'index'])->name('dashboards.index');
     Route::get('/settings/contacts', [ContactController::class, 'index'])->name('contacts.index');
     Route::post('/settings/contacts', [ContactController::class, 'store'])->name('contacts.store');

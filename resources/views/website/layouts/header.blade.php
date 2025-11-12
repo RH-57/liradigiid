@@ -92,7 +92,9 @@
         </svg>
       </button>
       <div x-show="dropdown" x-transition class="mt-2 space-y-2 pl-4 text-sm">
+        @foreach($services as $service)
         <a href="{{ route('web.service.detail', $service->slug) }}" class="block hover:text-gray-300">{{$service->name}}</a>
+        @endforeach
       </div>
     </div>
     <a href="{{ route('web.portfolios') }}" class="block hover:text-gray-200">Portfolio</a>
