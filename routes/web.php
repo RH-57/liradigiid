@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\MediaSocialController;
+use App\Http\Controllers\Admin\PackageController;
 use App\Http\Controllers\Admin\PortfolioController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\TestimonialController;
@@ -83,4 +84,5 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::resource('/users', UserController::class);
     Route::resource('/services', ServiceController::class);
     Route::resource('/faqs', FaqController::class);
+    Route::resource('/packages', PackageController::class);
 });

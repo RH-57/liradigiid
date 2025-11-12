@@ -53,6 +53,12 @@
                 </a>
             </li><!-- End Profile Page Nav -->
             <li class="nav-item">
+                <a class="nav-link collapsed" href="{{route('packages.index')}}">
+                    <i class="bi bi-circle"></i>
+                    <span>Package</span>
+                </a>
+            </li><!-- End Profile Page Nav -->
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="{{route('portfolios.index')}}">
                     <i class="bi bi-circle"></i>
                     <span>Portfolios</span>

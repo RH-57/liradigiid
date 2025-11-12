@@ -12,7 +12,7 @@ class Package extends Model
 
     protected $fillable = [
         'service_id', 'name', 'description', 'price', 'original_price',
-        'discount', 'is_popular', 'status',
+        'discount', 'is_popular', 'status', 'meta_title', 'meta_description', 'meta_keywords', 'meta_image',
     ];
 
     protected $casts = [
