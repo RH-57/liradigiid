@@ -9,7 +9,6 @@
         </a>
       </li><!-- End Dashboard Nav -->
 
-
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-menu-button-wide"></i><span>Settings</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -80,6 +79,16 @@
           <span>Users</span>
         </a>
       </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <form action="{{ route('sitemap.generate') }}" method="GET" class="d-inline">
+            <button type="submit" class="btn btn-primary w-100 d-flex align-items-center">
+            <i class="bi bi-diagram-3 me-2"></i>
+            <span>Generate Sitemap</span>
+            </button>
+        </form>
+    </li>
+<!-- End Dashboard Nav -->
 
     </ul>
 
