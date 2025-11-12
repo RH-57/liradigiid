@@ -138,7 +138,7 @@ class ArticleController extends Controller
 
         $request->validate([
             'title'             => 'required|string|max:255',
-            'category'          => 'required|in:tutorial,berita',
+            'category'          => 'required|in:tutorial,insight',
             'content'           => 'required|string',
             'excerpt'           => 'nullable|string',
             'featured_image'    => 'nullable|image|mimes:jpg,jpeg,png,webp|max:4096',
