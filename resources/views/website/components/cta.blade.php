@@ -17,7 +17,7 @@
     <!-- Buttons -->
     <div class="flex flex-col sm:flex-row justify-center gap-4">
 
-      <a href="https://wa.me/6281234567890"
+      <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20Liradigi%2C%20saya%20tertarik%20untuk%20membuat%20website.%20Bisa%20minta%20informasi%20lebih%20lanjut%3F"
          class="px-5 py-2.5 bg-white text-[#136ad5] rounded-xl font-semibold shadow hover:bg-yellow-500 hover:text-white transition">
         <i class="fa-brands fa-whatsapp mr-2"></i> Konsultasi Gratis
       </a>

@@ -53,7 +53,7 @@
           <li><i class="fa-solid fa-envelope text-yellow-500 mr-2"></i>{{$contacts->email}}</li>
           <li class="flex items-center">
             <i class="fa-brands fa-whatsapp text-yellow-500 mr-2"></i>
-            <a href="" target="_blank">Chat via WhatsApp</a>
+            <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20Liradigi%2C%20saya%20tertarik%20untuk%20membuat%20website.%20Bisa%20minta%20informasi%20lebih%20lanjut%3F" target="_blank">Chat via WhatsApp</a>
             <span class="ml-2 bg-yellow-500/10 text-yellow-400 text-xs font-semibold px-2 py-0.5 rounded-full animate-pulse">
                 Online
             </span>

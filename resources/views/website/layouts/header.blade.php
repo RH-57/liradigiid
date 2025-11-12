@@ -45,7 +45,7 @@
 
       <!-- Tombol Pesan Sekarang -->
       <div class="hidden md:flex">
-        <a href="https://wa.me/{{$contacts->phone}}" target="_blank"
+        <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20Liradigi%2C%20saya%20tertarik%20untuk%20membuat%20website.%20Bisa%20minta%20informasi%20lebih%20lanjut%3F" target="_blank"
             class="relative px-5 py-2.5 bg-white text-[#136ad5] rounded-xl font-semibold shadow flex items-center justify-center overflow-hidden transition-all duration-300 group hover:bg-yellow-500 hover:text-white">
 
             <!-- Teks normal -->
