@@ -213,9 +213,7 @@
   @endif
 
   @include('website.layouts.footer')
-  @include('website.components.google-tag-body')
 
-    @include('website.components.google-tag-footer')
   <script src="{{ asset('build/assets/app-BYk74Vyi.js') }}" defer></script>
   <script>
         function copyLink(btn) {
