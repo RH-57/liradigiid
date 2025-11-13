@@ -1,6 +1,16 @@
 import Alpine from 'alpinejs'
 import AOS from 'aos'
+import Prism from 'prismjs'
 import 'aos/dist/aos.css'
+import 'prismjs/themes/prism-tomorrow.css'
+
+// bahasa tambahan
+import 'prismjs/components/prism-markup'
+import 'prismjs/components/prism-clike'
+import 'prismjs/components/prism-php'
+import 'prismjs/components/prism-javascript'
+import 'prismjs/components/prism-css'
+import 'prismjs/components/prism-sql'
 
 
 window.Alpine = Alpine
@@ -82,5 +92,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   setInterval(slide, 2500);
+});
+
+// --- tambahkan ini di paling bawah ---
+document.addEventListener('DOMContentLoaded', () => {
+    Prism.highlightAll();
 });
 
