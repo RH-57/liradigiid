@@ -112,6 +112,7 @@ class ArticleController extends Controller
             'views'             => 0,
         ]);
 
+        Cache::forget('articles_count_active');
         Cache::forget('home_articles');
         Cache::forget('articles');
         for ($i = 1; $i <= 20; $i++) {
@@ -238,6 +239,8 @@ class ArticleController extends Controller
             'published_at'      => $publishedAt,
         ]);
 
+
+        Cache::forget('articles_count_active');
         Cache::forget('home_articles');
         Cache::forget('articles');
         for ($i = 1; $i <= 20; $i++) {
@@ -264,6 +267,7 @@ class ArticleController extends Controller
 
         $article->delete();
 
+         Cache::forget('articles_count_active');
         Cache::forget('home_articles');
         Cache::forget('articles');
         for ($i = 1; $i <= 20; $i++) {

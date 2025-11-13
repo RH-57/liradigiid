@@ -24,7 +24,7 @@ class DashboardController extends Controller
         });
 
         $articles = Cache::remember('articles_count_active', 3600, function () {
-            return Article::count();
+            return Article::where('status', 'published')->count();
         });
 
         $todayVisitors = Visitor::whereDate('visit_date', Carbon::today())->count();

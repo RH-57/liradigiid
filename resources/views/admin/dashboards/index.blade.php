@@ -90,7 +90,7 @@
                     </div>
                     <div class="ps-3">
                       <h6>{{$packages}}</h6>
-                      <span class="text-muted small pt-2 ps-1">Article & News</span>
+                      <span class="text-muted small pt-2 ps-1">Package</span>
 
                     </div>
                   </div>
@@ -110,7 +110,7 @@
                     </div>
                     <div class="ps-3">
                       <h6>{{$articles}}</h6>
-                      <span class="text-muted small pt-2 ps-1">Articles</span>
+                      <span class="text-muted small pt-2 ps-1">Published</span>
 
                     </div>
                   </div>
