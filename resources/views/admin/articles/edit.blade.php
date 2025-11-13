@@ -226,22 +226,35 @@ import {
     Font,
     List,
     Indent,
-    IndentBlock
+    IndentBlock,
+    Code,
+    CodeBlock
 } from 'ckeditor5';
 
 ClassicEditor
     .create(document.querySelector('#description'), {
         licenseKey: 'GPL', // versi GPL bebas
-        plugins: [ Essentials, Paragraph, Bold, Italic, Font, List, Indent, IndentBlock ],
+        plugins: [ Essentials, Paragraph, Bold, Italic, Font, List, Indent, IndentBlock, Code, CodeBlock ],
         toolbar: [
             'undo', 'redo', '|',
             'bold', 'italic', '|',
             'bulletedList', 'numberedList', '|',
             'outdent', 'indent', '|',
-            'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor'
+            'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', '|',
+            'code', 'codeBlock',
         ],
         fontSize: {
             options: [ 'tiny', 'small', 'default', 'big', 'huge' ]
+        },
+        codeBlock: {
+            languages: [
+                { language: 'plaintext', label: 'Plain text' },
+                { language: 'php', label: 'PHP' },
+                { language: 'javascript', label: 'JavaScript' },
+                { language: 'html', label: 'HTML' },
+                { language: 'css', label: 'CSS' },
+                { language: 'sql', label: 'SQL' },
+            ]
         }
     })
     .then(editor => {
