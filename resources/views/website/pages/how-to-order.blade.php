@@ -178,6 +178,7 @@
   @include('website.layouts.whatsapp')
   @include('website.layouts.footer')
   @include('website.components.google-tag-body')
+  @include('website.components.google-tag-footer')
 
   <script src="{{ asset('build/assets/app-BYk74Vyi.js') }}" defer></script>
 </body>
