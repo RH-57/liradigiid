@@ -161,6 +161,21 @@
           <a href="https://wa.me/?text={{ urlencode($article->title . ' ' . request()->fullUrl()) }}" target="_blank" class="text-green-600 hover:text-green-800">
             <i class="fab fa-whatsapp text-xl"></i>
           </a>
+          <div class="relative">
+            <button onclick="copyLink(this)"
+                    class="text-gray-600 hover:text-gray-800 focus:outline-none relative"
+                    title="Salin tautan">
+                <i class="fas fa-link text-xl"></i>
+            </button>
+
+            {{-- Popup --}}
+            <div id="copy-popup"
+                class="absolute left-1/2 -translate-x-1/2 -top-8
+                        bg-gray-800 text-white text-sm rounded-md px-2 py-1
+                        pointer-events-none z-50"
+                style="opacity: 0; transform: scale(0.9); transition: all 0.2s ease-out;">
+            Tautan disalin!
+            </div>
         </div>
       </div>
     </div>
@@ -197,5 +212,22 @@
 
 
   <script src="{{ asset('build/assets/app-BYk74Vyi.js') }}" defer></script>
+  <script>
+        function copyLink(btn) {
+        const url = "{{ request()->fullUrl() }}";
+        const popup = btn.parentElement.querySelector('#copy-popup');
+
+        navigator.clipboard.writeText(url).then(() => {
+            popup.style.opacity = "1";
+            popup.style.transform = "scale(1)";
+
+            setTimeout(() => {
+            popup.style.opacity = "0";
+            popup.style.transform = "scale(0.9)";
+            }, 2000);
+        });
+        }
+        </script>
+
 </body>
 </html>
