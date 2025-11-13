@@ -32,6 +32,8 @@
   <meta name="twitter:title" content="{{ $article->meta_title ?? $article->title }}">
   <meta name="twitter:description" content="{{ $article->meta_description ?? Str::limit(strip_tags($article->content), 150) }}">
   <meta name="twitter:image" content="{{ $article->meta_image ? asset('storage/'.$article->meta_image) : asset('assets/website/img/default-article.jpg') }}">
+  <meta name="twitter:site" content="@liradigi">
+    <meta name="twitter:creator" content="@liradigi">
 
   @include('website.components.google-tag-header')
 
@@ -45,6 +47,7 @@
         '@type' => 'WebPage',
         '@id' => url()->current(),
     ],
+    'url' => url()->current(),
 
     'headline' => $article->meta_title ?? $article->title,
     'description' => strip_tags(Str::limit($article->meta_description ?? $article->content, 160)),
@@ -70,6 +73,8 @@
         'logo' => [
         '@type' => 'ImageObject',
         'url' => asset('assets/website/img/logo.png'),
+        'width' => 600,
+        'height' => 60
         ],
     ],
 
