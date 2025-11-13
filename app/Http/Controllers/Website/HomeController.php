@@ -31,12 +31,13 @@ class HomeController extends Controller
             return Portfolio::get();
         });
 
-        $articles = Cache::remember('articles_home', 3600, function () {
-            return Article::where('status', 'published', 'slug')
+        $articles = Cache::remember('home_articles', 3600, function () {
+            return Article::where('status', 'published')
                 ->orderBy('published_at', 'desc')
                 ->take(3)
                 ->get(['id', 'title', 'category', 'excerpt', 'featured_image', 'published_at', 'slug']);
         });
+
 
         $testimonials = Cache::remember('testimonials_home', 3600, function () {
             return Testimonial::where('status', 'active')

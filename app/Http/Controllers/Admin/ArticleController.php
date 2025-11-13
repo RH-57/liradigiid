@@ -112,10 +112,12 @@ class ArticleController extends Controller
             'views'             => 0,
         ]);
 
+        Cache::forget('home_articles');
         Cache::forget('articles');
         for ($i = 1; $i <= 20; $i++) {
             Cache::forget("articles_page_{$i}");
         }
+
 
         return redirect()->route('articles.index')->with('success', 'Artikel berhasil ditambahkan');
     }
@@ -236,10 +238,12 @@ class ArticleController extends Controller
             'published_at'      => $publishedAt,
         ]);
 
+        Cache::forget('home_articles');
         Cache::forget('articles');
         for ($i = 1; $i <= 20; $i++) {
             Cache::forget("articles_page_{$i}");
         }
+
 
         return redirect()->route('articles.index')->with('success', 'Artikel berhasil diperbarui');
     }
@@ -259,6 +263,8 @@ class ArticleController extends Controller
         }
 
         $article->delete();
+
+        Cache::forget('home_articles');
         Cache::forget('articles');
         for ($i = 1; $i <= 20; $i++) {
             Cache::forget("articles_page_{$i}");
