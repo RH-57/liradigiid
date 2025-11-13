@@ -99,6 +99,7 @@
     </div>
     <a href="{{ route('web.portfolios') }}" class="block hover:text-gray-200">Portfolio</a>
     <a href="{{ route('web.howtoorder') }}" class="block hover:text-gray-200">Cara Order</a>
+    <a href="{{route('web.articles')}}" class="block hover:text-gray-200">Artikel</a>
 
     <!-- Tombol Pesan Sekarang (mobile) -->
     <div class="pt-2 border-t border-white/30">
