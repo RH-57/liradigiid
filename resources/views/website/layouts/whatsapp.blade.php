@@ -1,6 +1,7 @@
 <!-- Floating WhatsApp Button -->
 <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20Liradigi%2C%20saya%20tertarik%20untuk%20membuat%20website.%20Bisa%20minta%20informasi%20lebih%20lanjut%3F"
    target="_blank"
+   aria-label="Hubungi Liradigi melalui WhatsApp"
    class="fixed bottom-6 right-6 z-50 group">
     <!-- Ripple Effect (Ombak) -->
     <span class="absolute inset-0 rounded-full bg-green-500/40 scale-100 animate-ping"></span>
