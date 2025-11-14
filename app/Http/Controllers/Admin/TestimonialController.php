@@ -45,8 +45,8 @@ class TestimonialController extends Controller
             $file = $request->file('photo');
             $image = $manager->read($file->getPathname());
 
-            $image->cover(400, 400);
-            $encoded = $image->encode(new WebpEncoder(quality: 80));
+            $image->cover(180, 180);
+            $encoded = $image->encode(new WebpEncoder(quality: 70));
 
             $filename = uniqid() . '.webp';
             $path = 'testimonials/photos/' . $filename;
@@ -98,8 +98,8 @@ class TestimonialController extends Controller
             $manager = new ImageManager(new Driver());
             $file = $request->file('photo');
             $image = $manager->read($file->getPathname());
-            $image->cover(400, 400);
-            $encoded = $image->encode(new WebpEncoder(quality: 80));
+            $image->cover(180, 180);
+            $encoded = $image->encode(new WebpEncoder(quality: 70));
 
             $filename = uniqid() . '.webp';
             $path = 'testimonials/photos/' . $filename;
