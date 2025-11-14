@@ -23,10 +23,8 @@ return Application::configure(basePath: dirname(__DIR__))
         }
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        $middleware->use([
-            TrackVisitor::class,
-        ]);
         $middleware->web(append: [
+            TrackVisitor::class,
             \Spatie\Honeypot\ProtectAgainstSpam::class,
         ]);
     })

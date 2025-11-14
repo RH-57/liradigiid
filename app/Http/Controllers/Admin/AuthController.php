@@ -40,6 +40,6 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/manage')->with('success', 'Logout Successfully');
+        return redirect('/manage-cms')->with('success', 'Logout Successfully');
     }
 }
