@@ -16,13 +16,13 @@
   <meta property="og:description" content="Lihat berbagai project website terbaik yang telah kami kerjakan untuk berbagai klien.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ url()->current() }}">
-  <meta property="og:image" content="{{ asset('assets/img/og/portfolio-og.jpg') }}">
+  <meta property="og:image" content="{{ asset('assets/website/img/og-liradigi.webp') }}">
 
    <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Portfolio Website | Liradigi">
   <meta name="twitter:description" content="Lihat berbagai project website terbaik yang telah kami selesaikan.">
-  <meta name="twitter:image" content="{{ asset('assets/img/og/portfolio-og.jpg') }}">
+  <meta name="twitter:image" content="{{ asset('assets/website/img/og-liradigi.webp') }}">
 
    @php
     $jsonLd = [

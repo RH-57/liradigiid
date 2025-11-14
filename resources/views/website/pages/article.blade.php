@@ -15,13 +15,13 @@
   <meta property="og:description" content="Temukan inspirasi, strategi digital, dan panduan teknologi untuk membantu bisnis Anda berkembang.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ url()->current() }}">
-  <meta property="og:image" content="{{ asset('assets/img/og/artikel.jpg') }}">
+  <meta property="og:image" content="{{ asset('assets/website/img/og-liradigi.webp') }}">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Artikel & Insight | Liradigi">
   <meta name="twitter:description" content="Kumpulan artikel menarik tentang website dan digital marketing.">
-  <meta name="twitter:image" content="{{ asset('assets/img/og/artikel.jpg') }}">
+  <meta name="twitter:image" content="{{ asset('assets/website/img/og-liradigi.webp') }}">
 
   @include('website.components.google-tag-header')
 

@@ -15,13 +15,13 @@
   <meta property="og:description" content="Ikuti 6 langkah mudah untuk memesan layanan pembuatan website profesional di Liradigi.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="{{ url()->current() }}">
-  <meta property="og:image" content="{{ asset('assets/img/og/cara-order.jpg') }}">
+  <meta property="og:image" content="{{ asset('assets/website/img/og-liradigi.webp') }}">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cara Order Website | Liradigi">
   <meta name="twitter:description" content="Langkah-langkah order layanan pembuatan website di Liradigi.">
-  <meta name="twitter:image" content="{{ asset('assets/img/og/cara-order.jpg') }}">
+  <meta name="twitter:image" content="{{ asset('assets/website/img/og-liradigi.webp') }}">
 
   @include('website.components.google-tag-header')
 

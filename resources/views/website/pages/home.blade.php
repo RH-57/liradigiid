@@ -10,9 +10,9 @@
     <meta name="author" content="Liradigi Digital Agency">
 
     <!-- ✅ Open Graph / Facebook -->
-    <meta property="og:title" content="Liradigi - Partner Digital untuk Bisnis Anda">
+    <meta property="og:title" content="Liradigi - Jasa Pembuatan Website Profesional & Cepat untuk Bisnis Anda">
     <meta property="og:description" content="Kami bantu Anda membangun website profesional, cepat, dan modern agar bisnis tampil unggul di dunia digital.">
-    <meta property="og:image" content="{{ asset('assets/website/img/og-liradigi.jpg') }}">
+    <meta property="og:image" content="{{ asset('assets/website/img/og-liradigi.webp') }}">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Liradigi">
@@ -21,7 +21,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Liradigi - Partner Digital untuk Bisnis Anda">
     <meta name="twitter:description" content="Digital agency spesialis pembuatan website profesional dan cepat.">
-    <meta name="twitter:image" content="{{ asset('assets/website/img/og-liradigi.jpg') }}">
+    <meta name="twitter:image" content="{{ asset('assets/website/img/og-liradigi.webp') }}">
 
     <!-- ✅ Favicon -->
     <link rel="icon" type="image/png" href="{{ asset('assets/website/img/logo.png') }}">
