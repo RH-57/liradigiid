@@ -23,9 +23,6 @@
     <meta name="twitter:description" content="Digital agency spesialis pembuatan website profesional dan cepat.">
     <meta name="twitter:image" content="{{ asset('assets/website/img/og-liradigi.webp') }}">
 
-    <!-- ✅ Favicon -->
-    <link rel="icon" type="image/png" href="{{ asset('assets/website/img/logo.png') }}">
-
     <!-- ✅ Canonical -->
     <link rel="canonical" href="{{ url()->current() }}">
 
@@ -33,6 +30,9 @@
     @include('website.components.structured-data')
 
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </noscript>
 
     @include('website.components.google-tag-header')
 
@@ -307,7 +307,7 @@
                         </div>
 
                         <!-- Nama -->
-                        <h4 class="font-semibold text-gray-800 text-sm">{{ $testimonial->name }}</h4>
+                        <h3 class="font-semibold text-gray-800 text-sm">{{ $testimonial->name }}</h3>
                         <p class="text-xs text-gray-500">{{ $testimonial->company }}</p>
 
                     </div>
