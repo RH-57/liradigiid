@@ -28,6 +28,7 @@
 
           <div
             x-show="dropdown"
+            x-cloak
             x-transition
             class="absolute top-full mt-2 bg-white rounded-xl shadow-lg py-2 w-48 text-gray-700"
             @click.away="dropdown = false"
@@ -91,7 +92,7 @@
             d="M19 9l-7 7-7-7" />
         </svg>
       </button>
-      <div x-show="dropdown" x-transition class="mt-2 space-y-2 pl-4 text-sm">
+      <div x-show="dropdown" x-transition class="mt-2 space-y-2 pl-4 text-sm" x-cloak>
         @foreach($services as $service)
         <a href="{{ route('web.service.detail', $service->slug) }}" class="block hover:text-gray-300">{{$service->name}}</a>
         @endforeach
