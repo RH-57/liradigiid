@@ -25,7 +25,7 @@
 
       <!-- Kolom 2: Menu Cepat -->
       <div>
-        <h4 class="text-lg font-semibold mb-4 text-white">Menu Cepat</h4>
+        <h3 class="text-lg font-semibold mb-4 text-white">Menu Cepat</h3>
         <ul class="space-y-2 text-blue-100">
           <li><a href="{{ url('/') }}" class="hover:text-yellow-400 transition">Beranda</a></li>
           <li><a href="{{ route('web.portfolios') }}" class="hover:text-yellow-400 transition">Portfolio</a></li>
