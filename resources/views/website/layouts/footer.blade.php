@@ -16,7 +16,7 @@
         </p>
         <div class="flex space-x-3 mt-4">
             @foreach($mediasocials as $mediasocial)
-          <a href="{{$mediasocial->url}}" class="bg-blue-700 hover:bg-yellow-500 transition p-2 rounded-full">
+          <a href="{{$mediasocial->url}}" class="bg-blue-700 hover:bg-yellow-500 transition p-2 rounded-full" aria-label="{{$mediasocial->name}}">
             <i class="fa-brands {{$mediasocial->icon}}"></i>
           </a>
           @endforeach
