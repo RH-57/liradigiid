@@ -52,7 +52,7 @@
                   <h5 class="card-title text-center pb-0 fs-4">LOGIN</h5>
                 </div>
 
-                {{-- Error Message --}}
+                {{-- Error Message untuk session error --}}
                 @if(session('error'))
                   <div class="alert alert-danger alert-dismissible fade show" role="alert">
                     {{ session('error') }}
@@ -60,34 +60,50 @@
                   </div>
                 @endif
 
-                <form class="row g-3 needs-validation" action="{{ route('manage') }}" method="POST" novalidate>
+                {{-- Error Message untuk validation errors --}}
+                @if($errors->any())
+                  <div class="alert alert-danger alert-dismissible fade show" role="alert" id="errorAlert">
+                    @foreach($errors->all() as $error)
+                      {{ $error }}@if(!$loop->last)<br>@endif
+                    @endforeach
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+                @endif
+
+                <form class="row g-3 needs-validation" action="{{ route('manage.attempt') }}" method="POST" novalidate id="loginForm">
                   @csrf
 
                   <div class="col-12">
                     <label for="yourEmail" class="form-label">Email</label>
-                    <input type="email" name="email" class="form-control" id="yourEmail" value="{{ old('email') }}" required>
+                    <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="yourEmail" value="{{ old('email') }}" required
+                           @if($errors->has('email') && str_contains($errors->first('email'), 'Terlalu banyak')) disabled @endif>
                     @error('email')
-                      <small class="text-danger">{{ $message }}</small>
+                      <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                   </div>
 
                   <div class="col-12">
                     <label for="yourPassword" class="form-label">Password</label>
-                    <input type="password" name="password" class="form-control" id="yourPassword" required>
+                    <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="yourPassword" required
+                           @if($errors->has('email') && str_contains($errors->first('email'), 'Terlalu banyak')) disabled @endif>
                     @error('password')
-                      <small class="text-danger">{{ $message }}</small>
+                      <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                   </div>
 
                   <div class="col-12">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
+                      <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe" {{ old('remember') ? 'checked' : '' }}
+                             @if($errors->has('email') && str_contains($errors->first('email'), 'Terlalu banyak')) disabled @endif>
                       <label class="form-check-label" for="rememberMe">Remember me</label>
                     </div>
                   </div>
 
                   <div class="col-12">
-                    <button class="btn btn-primary w-100" type="submit">Login</button>
+                    <button class="btn btn-primary w-100" type="submit" id="loginButton"
+                            @if($errors->has('email') && str_contains($errors->first('email'), 'Terlalu banyak')) disabled @endif>
+                      Login
+                    </button>
                   </div>
                 </form>
 
@@ -109,6 +125,82 @@
 <script src="{{ asset('assets/admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('assets/admin/vendor/simple-datatables/simple-datatables.js') }}"></script>
 <script src="{{ asset('assets/admin/js/main.js') }}"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const errorAlert = document.getElementById('errorAlert');
+    const loginForm = document.getElementById('loginForm');
+    const loginButton = document.getElementById('loginButton');
+    const emailInput = document.getElementById('yourEmail');
+    const passwordInput = document.getElementById('yourPassword');
+    const rememberInput = document.getElementById('rememberMe');
+
+    // Cek jika ada error rate limit
+    const errorText = errorAlert ? errorAlert.textContent : '';
+
+    if (errorText.includes('Terlalu banyak')) {
+        // Extract waktu tunggu dari pesan error
+        const timeMatch = errorText.match(/(\d+) detik/);
+        if (timeMatch) {
+            const seconds = parseInt(timeMatch[1]);
+            disableForm(seconds);
+            startCountdown(seconds);
+        }
+    }
+
+    function disableForm(seconds) {
+        // Disable form elements
+        if (loginButton) loginButton.disabled = true;
+        if (emailInput) emailInput.disabled = true;
+        if (passwordInput) passwordInput.disabled = true;
+        if (rememberInput) rememberInput.disabled = true;
+
+        // Ubah style tombol
+        if (loginButton) {
+            loginButton.innerHTML = `Tunggu ${seconds} detik...`;
+            loginButton.classList.remove('btn-primary');
+            loginButton.classList.add('btn-secondary');
+        }
+    }
+
+    function enableForm() {
+        // Enable form elements
+        if (loginButton) loginButton.disabled = false;
+        if (emailInput) emailInput.disabled = false;
+        if (passwordInput) passwordInput.disabled = false;
+        if (rememberInput) rememberInput.disabled = false;
+
+        // Kembalikan style tombol
+        if (loginButton) {
+            loginButton.innerHTML = 'Login';
+            loginButton.classList.remove('btn-secondary');
+            loginButton.classList.add('btn-primary');
+        }
+
+        // Hapus error alert
+        if (errorAlert) {
+            errorAlert.remove();
+        }
+    }
+
+    function startCountdown(seconds) {
+        let timeLeft = seconds;
+
+        const countdownInterval = setInterval(() => {
+            timeLeft--;
+
+            if (loginButton) {
+                loginButton.innerHTML = `Tunggu ${timeLeft} detik...`;
+            }
+
+            if (timeLeft <= 0) {
+                clearInterval(countdownInterval);
+                enableForm();
+            }
+        }, 1000);
+    }
+});
+</script>
 
 </body>
 </html>

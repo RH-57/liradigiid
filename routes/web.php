@@ -63,8 +63,9 @@ Route::get('/sitemap.xml', function () {
 });
 
 
-Route::get('/manage-cms', [AuthController::class, 'showLoginForm'])->name('manage');
-Route::post('/manage-cms', [AuthController::class, 'login'])->name('manage.attempt');
+Route::get('/manage-cms', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/manage-cms', [AuthController::class, 'login'])
+    ->name('manage.attempt');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/', [HomeController::class, 'index'])->name('web.home');
