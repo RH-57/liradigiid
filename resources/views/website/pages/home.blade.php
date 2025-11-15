@@ -69,7 +69,7 @@
             <!-- Right: Floating Image -->
             <div class="flex justify-center md:justify-end mt-10 md:mt-0" data-aos="fade-left">
                 <img
-                    src="{{ asset('assets/website/img/hero.png') }}"
+                    src="{{ asset('assets/website/img/hero.webp') }}"
                     alt="Web Development Illustration"
                     class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-2xl floating"
                 >
