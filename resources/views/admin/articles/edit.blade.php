@@ -228,16 +228,18 @@ import {
     Indent,
     IndentBlock,
     Code,
-    CodeBlock
+    CodeBlock,
+    Link
 } from 'ckeditor5';
 
 ClassicEditor
     .create(document.querySelector('#description'), {
         licenseKey: 'GPL', // versi GPL bebas
-        plugins: [ Essentials, Paragraph, Bold, Italic, Font, List, Indent, IndentBlock, Code, CodeBlock ],
+        plugins: [ Essentials, Paragraph, Bold, Italic, Font, List, Indent, IndentBlock, Code, CodeBlock, Link ],
         toolbar: [
             'undo', 'redo', '|',
             'bold', 'italic', '|',
+            'link', '|',
             'bulletedList', 'numberedList', '|',
             'outdent', 'indent', '|',
             'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', '|',

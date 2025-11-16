@@ -60,3 +60,15 @@
 .floating {
   animation: float 4s ease-in-out infinite;
 }
+
+.prose a {
+    color: #136ad5 !important;
+    text-decoration: none !important;
+    font-weight: 600;
+}
+
+.prose a:hover {
+    color: #0d4fa0 !important;
+    text-decoration: none !important;
+}
+
