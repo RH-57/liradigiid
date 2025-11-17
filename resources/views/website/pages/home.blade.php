@@ -58,7 +58,7 @@
                     Partner Digital Untuk Bisnis Anda
                 </h1>
                 <p class="text-blue-100 text-base md:text-lg">
-                    Kami membantu membangun website profesional dan cepat agar bisnis Anda tampil unggul di dunia digital.
+                    Kami membangun website profesional dengan kualitas terbaik—cepat, stabil, dan dioptimalkan untuk Google Analytics, SEO, dan CTR yang tinggi, sehingga bisnis Anda tampil lebih unggul dan mudah ditemukan di dunia digital.
                 </p>
 
                 <div class="flex flex-wrap justify-center md:justify-start gap-3">
