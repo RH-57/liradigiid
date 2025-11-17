@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{asset('assets/website/img/favicon.ico')}}" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
+
+
     <title>Liradigi - Jasa Pembuatan Website Profesional & Cepat untuk Bisnis Anda</title>
     <meta name="description" content="Liradigi adalah digital agency yang membantu bisnis Anda tampil unggul di dunia digital melalui pembuatan website profesional, cepat, dan SEO-friendly.">
     <meta name="keywords" content="Liradigi, jasa pembuatan website, digital agency, web design, website UMKM, web instansi, jasa buat website murah, SEO website">

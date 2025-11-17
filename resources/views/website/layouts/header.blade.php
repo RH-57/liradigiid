@@ -14,7 +14,10 @@
 
       <!-- Desktop Menu (center) -->
       <nav class="hidden md:flex flex-1 justify-center space-x-8 text-white font-semibold">
-        <a href="{{ route('web.home') }}" class="hover:text-orange-300 transition">Beranda</a>
+        <a href="{{ route('web.home') }}"
+        class="{{ request()->routeIs('web.home') ? 'text-orange-300' : 'hover:text-orange-300' }} transition">
+        Beranda
+        </a>
 
         <!-- Dropdown -->
         <div class="relative" @mouseenter="dropdown = true" @mouseleave="dropdown = false">
@@ -34,14 +37,27 @@
             @click.away="dropdown = false"
           >
           @foreach($services as $service)
-            <a href="{{ route('web.service.detail', $service->slug) }}" class="block px-4 py-2 hover:bg-gray-100">{{$service->name}}</a>
+            <a href="{{ route('web.service.detail', $service->slug) }}"
+            class="block px-4 py-2 hover:bg-gray-100
+                    {{ request()->is('layanan/'.$service->slug) ? 'bg-gray-100 font-semibold text-blue-600' : '' }}">
+            {{ $service->name }}
+            </a>
             @endforeach
           </div>
         </div>
 
-        <a href="{{ route('web.portfolios') }}" class="hover:text-orange-300 transition">Portfolio</a>
-        <a href="{{ route('web.howtoorder') }}" class="hover:text-orange-300 transition">Cara Order</a>
-        <a href="{{route('web.articles')}}" class="hover:text-orange-300 transition">Artikel</a>
+        <a href="{{ route('web.portfolios') }}"
+        class="{{ request()->routeIs('web.portfolios') ? 'text-orange-300' : 'hover:text-orange-300' }} transition">
+        Portfolio
+        </a>
+        <a href="{{ route('web.howtoorder') }}"
+        class="{{ request()->routeIs('web.howtoorder') ? 'text-orange-300' : 'hover:text-orange-300' }} transition">
+        Cara Order
+        </a>
+        <a href="{{ route('web.articles') }}"
+        class="{{ request()->routeIs('web.articles') ? 'text-orange-300' : 'hover:text-orange-300' }} transition">
+        Artikel
+        </a>
       </nav>
 
       <!-- Tombol Pesan Sekarang -->
@@ -82,10 +98,14 @@
 
   <!-- Mobile Menu -->
   <div x-show="open" x-transition class="md:hidden bg-gradient-to-br from-blue-600 via-blue-400 to-blue-100 text-white px-6 py-4 space-y-3 font-medium">
-    <a href="{{ route('web.home') }}" class="block hover:text-gray-200">Beranda</a>
+    <a href="{{ route('web.home') }}"
+    class="block {{ request()->routeIs('web.home') ? 'font-semibold text-yellow-300' : 'hover:text-gray-200' }}">
+    Beranda
+    </a>
+
     <div>
       <button @click="dropdown = !dropdown" class="w-full flex justify-between items-center hover:text-gray-200">
-        Paket Website
+        Daftar Layanan
         <svg class="ml-1 w-4 h-4 transform transition-transform" :class="{ 'rotate-180': dropdown }"
           xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -94,13 +114,30 @@
       </button>
       <div x-show="dropdown" x-transition class="mt-2 space-y-2 pl-4 text-sm" x-cloak>
         @foreach($services as $service)
-        <a href="{{ route('web.service.detail', $service->slug) }}" class="block hover:text-gray-300">{{$service->name}}</a>
+        <a href="{{ route('web.service.detail', $service->slug) }}"
+        class="block hover:text-gray-300
+                {{ request()->is('layanan/'.$service->slug) ? 'text-yellow-300 font-semibold' : '' }}">
+        {{ $service->name }}
+        </a>
+
         @endforeach
       </div>
     </div>
-    <a href="{{ route('web.portfolios') }}" class="block hover:text-gray-200">Portfolio</a>
-    <a href="{{ route('web.howtoorder') }}" class="block hover:text-gray-200">Cara Order</a>
-    <a href="{{route('web.articles')}}" class="block hover:text-gray-200">Artikel</a>
+    <a href="{{ route('web.portfolios') }}"
+    class="block {{ request()->routeIs('web.portfolios') ? 'font-semibold text-yellow-300' : 'hover:text-gray-200' }}">
+    Portfolio
+    </a>
+
+    <a href="{{ route('web.howtoorder') }}"
+    class="block {{ request()->routeIs('web.howtoorder') ? 'font-semibold text-yellow-300' : 'hover:text-gray-200' }}">
+    Cara Order
+    </a>
+
+    <a href="{{ route('web.howtoorder') }}"
+    class="block {{ request()->routeIs('web.howtoorder') ? 'font-semibold text-yellow-300' : 'hover:text-gray-200' }}">
+    Cara Order
+    </a>
+
 
     <!-- Tombol Pesan Sekarang (mobile) -->
     <div class="pt-2 border-t border-white/30">

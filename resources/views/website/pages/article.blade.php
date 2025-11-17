@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="{{asset('assets/website/img/favicon.ico')}}" type="image/x-icon">
-  <title>Artikel & Insight | Liradigi</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
+  <title>Liradigi - Artikel & Insight</title>
    <meta name="description" content="Kumpulan artikel, tips, panduan, dan insight seputar website, digital marketing, dan teknologi terbaru dari Liradigi.">
 
   <!-- Canonical -->
   <link rel="canonical" href="{{ url()->current() }}">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Artikel & Insight | Liradigi">
+  <meta property="og:title" content="Liradigi - Artikel & Insight">
   <meta property="og:description" content="Temukan inspirasi, strategi digital, dan panduan teknologi untuk membantu bisnis Anda berkembang.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ url()->current() }}">
@@ -153,7 +156,7 @@
 
       {{-- Pagination --}}
       <div class="mt-14 flex justify-center" data-aos="fade-up">
-        {{ $articles->links('pagination::tailwind') }}
+        {{ $articles->links('vendor.pagination.custom') }}
       </div>
     </div>
   </section>

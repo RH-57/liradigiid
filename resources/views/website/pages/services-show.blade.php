@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
     <title>{{ $service->meta_title ?? $service->name }} - Liradigi</title>
     <meta name="description" content="{{ $service->meta_description ?? Str::limit(strip_tags($service->description), 150) }}">
     <meta name="keywords" content="{{ $service->meta_keywords }}">
-    <link rel="icon" href="{{asset('assets/website/img/favicon.ico')}}" type="image/x-icon">
     <meta property="og:title" content="{{ $service->meta_title ?? $service->name }}">
     <meta property="og:description" content="{{ $service->meta_description }}">
     <meta property="og:image" content="{{ asset('storage/' . $service->meta_image) }}">
