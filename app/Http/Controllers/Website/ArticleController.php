@@ -79,4 +79,30 @@ class ArticleController extends Controller
         return view('website.pages.article-show', compact('article', 'relatedArticles', 'mediasocials', 'contacts', 'services'));
     }
 
+    public function showByCategory($category) {
+        $services = Cache::remember('services', 31536000, fn() => Service::get());
+        $contacts = Cache::remember('contacts', 31536000, fn() => Contact::first());
+        $mediasocials = Cache::remember('mediasocials', 31536000, fn() => MediaSocial::all());
+
+        // Ambil semua artikel berdasarkan kategori
+        $articles = Article::where('category', $category)
+            ->where('status', 'published')
+            ->orderByDesc('created_at')
+            ->paginate(6); // bisa diubah sesuai kebutuhan
+
+        // Jika artikel kosong → 404
+        if ($articles->isEmpty()) {
+            abort(404);
+        }
+
+        return view('website.pages.article-category', [
+            'services' => $services,
+            'contacts' => $contacts,
+            'mediasocials' => $mediasocials,
+            'category' => $category,
+            'articles' => $articles,
+        ]);
+
+    }
+
 }
