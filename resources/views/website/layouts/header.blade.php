@@ -133,9 +133,9 @@
     Cara Order
     </a>
 
-    <a href="{{ route('web.howtoorder') }}"
-    class="block {{ request()->routeIs('web.howtoorder') ? 'font-semibold text-yellow-300' : 'hover:text-gray-200' }}">
-    Cara Order
+    <a href="{{ route('web.articles') }}"
+    class="block {{ request()->routeIs('web.articles') ? 'font-semibold text-yellow-300' : 'hover:text-gray-200' }}">
+    Artikel
     </a>
 
 
