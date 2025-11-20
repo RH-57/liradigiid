@@ -68,6 +68,10 @@ Route::post('/manage-cms', [AuthController::class, 'login'])
     ->name('manage.attempt');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
+Route::fallback(function () {
+    return response()->view('errors.404', [], 404);
+});
+
 Route::get('/', [HomeController::class, 'index'])->name('web.home');
 Route::get('/portfolio', [WebsitePortfolioController::class, 'index'])->name('web.portfolios');
 Route::get('/artikel', [WebsiteArticleController::class, 'index'])->name('web.articles');
