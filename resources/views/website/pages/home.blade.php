@@ -245,6 +245,66 @@
         </div>
     </section>
 
+    <section class="py-20 bg-gradient-to-b from-white to-blue-50" id="teknologi">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#136ad5] mb-3">
+                Teknologi yang Kami Gunakan
+            </h2>
+            <p class="text-gray-600 mb-12">
+                Kami menggunakan teknologi modern dan terpercaya untuk memastikan website Anda cepat, aman, dan stabil.
+            </p>
+
+            @php
+                $techs = [
+                    'php' => 'PHP',
+                    'laravel' => 'Laravel',
+                    'mysql' => 'MySQL',
+                    'cloudflare' => 'Cloudflare',
+                    'bootstrap' => 'Bootstrap',
+                    'tailwind' => 'Tailwind CSS',
+                    'js' => 'Javascript',
+                ];
+            @endphp
+
+            <!-- Container -->
+            <div class="w-full">
+
+                <!-- MOBILE (scroll horizontal) -->
+                <div class="flex gap-6 overflow-x-auto scrollbar-hide md:hidden px-1 py-3">
+                    @foreach ($techs as $key => $label)
+                        <div class="group flex-none w-28 h-28 bg-white rounded-2xl shadow p-5
+                                    flex items-center justify-center transition-all duration-300
+                                    hover:shadow-xl hover:-translate-y-1"
+                            aria-label="{{ $label }}">
+
+                            <img src="{{ asset('assets/website/img/' . $key . '.png') }}"
+                                class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
+                                alt="{{ $label }}">
+                        </div>
+                    @endforeach
+                </div>
+
+                <!-- DESKTOP (all logos) -->
+                <div class="hidden md:flex justify-center flex-wrap gap-10">
+                    @foreach ($techs as $key => $label)
+                        <div class="group w-28 h-28 bg-white rounded-2xl shadow p-5
+                                    flex items-center justify-center transition-all duration-300
+                                    hover:shadow-xl hover:-translate-y-1"
+                            aria-label="{{ $label }}">
+
+                            <img src="{{ asset('assets/website/img/' . $key . '.png') }}"
+                                class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
+                                alt="{{ $label }}">
+                        </div>
+                    @endforeach
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
     <section class="py-20 bg-gradient-to-b from-white to-blue-50 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-[#136ad5] mb-3" data-aos="fade-up">
