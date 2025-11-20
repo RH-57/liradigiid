@@ -75,7 +75,6 @@
                         <table class="table align-middle">
                             <thead>
                                 <tr>
-                                    <th scope="col" style="width:50px">#</th>
                                     <th scope="col">Title</th>
                                     <th scope="col" style="width:130px">Category</th>
                                     <th scope="col" style="width:120px">Status</th>
@@ -87,7 +86,6 @@
                             <tbody>
                                 @forelse($articles as $index => $article)
                                 <tr>
-                                    <td>{{ $index + 1 }}</td>
                                     <td>
                                         <div class="d-flex align-items-center">
                                             @if($article->featured_image)

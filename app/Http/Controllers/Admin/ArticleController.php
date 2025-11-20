@@ -17,8 +17,10 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        $articles = Cache::remember('articles', 3600, function () {
-            return Article::latest()->get();
+        $page = request()->get('page', 1);
+
+        $articles = Cache::remember("articles_page_{$page}", 3600, function () {
+            return Article::latest()->paginate(5);
         });
 
         return view('admin.articles.index', compact('articles'));
