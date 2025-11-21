@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
     <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
-  <title>Liradigi - Artikel & Insight</title>
+  <title>Artikel & Insight - Liradigi</title>
    <meta name="description" content="Kumpulan artikel, tips, panduan, dan insight seputar website, digital marketing, dan teknologi terbaru dari Liradigi.">
 
   <!-- Canonical -->
@@ -81,9 +81,22 @@
     <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/triangular.png')] opacity-25"></div>
     <div class="relative text-center text-white px-6" data-aos="fade-down">
       <h1 class="text-4xl md:text-5xl font-bold mb-4">Artikel & Insight</h1>
-      <p class="text-blue-100 max-w-2xl mx-auto">
-        Temukan inspirasi, strategi digital, dan panduan teknologi untuk membantu bisnis Anda berkembang.
-      </p>
+      <!-- Breadcrumb -->
+        <nav class="text-sm flex justify-center" aria-label="Breadcrumb">
+            <ol class="flex items-center gap-2 text-white/80">
+                <li>
+                    <a href="{{ route('web.home') }}" class="hover:text-yellow-500 transition flex items-center">
+                        <i class="fa fa-home mr-1"></i> Home
+                    </a>
+                </li>
+
+                <li><span class="opacity-70">/</span></li>
+
+                <li class="font-semibold text-white">
+                    Artikel
+                </li>
+            </ol>
+        </nav>
     </div>
   </section>
 

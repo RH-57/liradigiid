@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
 
 
-    <title>Liradigi - Jasa Pembuatan Website Profesional & Terpercaya untuk Bisnis Anda</title>
+    <title>Jasa Pembuatan Website Profesional & Terpercaya untuk Bisnis Anda - Liradigi</title>
     <meta name="description" content="Liradigi adalah digital agency yang membantu bisnis Anda tampil unggul di dunia digital melalui pembuatan website profesional, cepat, dan SEO-friendly.">
     <meta name="keywords" content="Liradigi, jasa pembuatan website, digital agency, web design, website UMKM, web instansi, jasa buat website murah, SEO website">
     <meta name="author" content="Liradigi Digital Agency">

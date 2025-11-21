@@ -7,8 +7,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
     <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
-  <title>Liradigi - Cara Order Layanan Kami</title>
-  <meta name="description" content="Panduan lengkap cara order pembuatan website profesional di Liradigi, mulai dari konsultasi hingga website siap online.">
+  <title>Panduan Cara Order Website Profesional – Liradigi</title>
+  <meta name="description" content="Cara order website di Liradigi sangat mudah! Konsultasi, pilih paket, lakukan pembayaran, dan website Anda siap online dalam hitungan hari.">
 
   <!-- Canonical -->
   <link rel="canonical" href="{{ url()->current() }}">
@@ -109,19 +109,34 @@
     <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/triangular.png')] opacity-25"></div>
     <div class="relative text-center text-white px-6" data-aos="fade-down">
       <h1 class="text-4xl md:text-5xl font-bold mb-4">Cara Order Layanan</h1>
-      <p class="text-blue-100 max-w-2xl mx-auto">
-        Ikuti langkah-langkah mudah berikut untuk memulai pembuatan website profesional bersama kami.
-      </p>
+<!-- Breadcrumb -->
+        <nav class="text-sm flex justify-center" aria-label="Breadcrumb">
+            <ol class="flex items-center gap-2 text-white/80">
+                <li>
+                    <a href="{{ route('web.home') }}" class="hover:text-yellow-500 transition flex items-center">
+                        <i class="fa fa-home mr-1"></i> Home
+                    </a>
+                </li>
+
+                <li><span class="opacity-70">/</span></li>
+
+                <li class="font-semibold text-white">
+                    Cara Order
+                </li>
+            </ol>
+        </nav>
     </div>
   </section>
+
+  <section class="px-6 max-w-4xl mx-auto mt-10 text-center">
+    <p class="text-gray-600 mb-8">
+        Ikuti langkah-langkah mudah berikut untuk memulai membangun website profesional Anda bersama Liradigi.
+    </p>
+    </section>
 
   <!-- LANGKAH ORDER -->
   <section class="py-20 bg-white relative">
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
-      <h2 class="text-3xl md:text-4xl font-bold text-[#136ad5] text-center mb-14" data-aos="fade-up">
-        Langkah-Langkah Order
-      </h2>
-
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Step 1 -->
         <div class="bg-gradient-to-b from-blue-50 to-white p-8 rounded-2xl shadow hover:shadow-xl transition" data-aos="zoom-in" data-aos-delay="100">
@@ -180,6 +195,7 @@
     </div>
   </section>
 
+  @include('website.components.cta')
   @include('website.layouts.whatsapp')
   @include('website.layouts.footer')
   @include('website.components.google-tag-body')

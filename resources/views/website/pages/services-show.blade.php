@@ -32,7 +32,22 @@
         <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/triangular.png')] opacity-25"></div>
         <div class="relative max-w-6xl mx-auto px-6 text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ $service->name }}</h1>
-            <p class="text-blue-100 text-lg max-w-2xl mx-auto">{!! $service->description !!}</p>
+            <!-- Breadcrumb -->
+            <nav class="text-sm flex justify-center" aria-label="Breadcrumb">
+                <ol class="flex items-center gap-2 text-white/80">
+                    <li>
+                        <a href="{{ route('web.home') }}" class="hover:text-yellow-500 transition flex items-center">
+                            <i class="fa fa-home mr-1"></i> Home
+                        </a>
+                    </li>
+
+                    <li><span class="opacity-70">/</span></li>
+
+                    <li class="font-semibold text-white">
+                        {{$service->name}}
+                    </li>
+                </ol>
+            </nav>
         </div>
     </section>
 

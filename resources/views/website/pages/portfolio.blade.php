@@ -7,8 +7,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
     <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
-  <title>Liradigi - Portfolio Kami</title>
-  <meta name="description" content="Kumpulan project website profesional yang telah dikerjakan Liradigi untuk berbagai bisnis dan industri. Lihat hasil karya terbaik kami.">
+  <title>Portfolio Jasa Pembuatan Website Profesional - Liradigi</title>
+  <meta name="description" content="Lihat hasil pembuatan website modern, cepat, mobile friendly, dan SEO-ready untuk berbagai bisnis. Klik untuk melihat contoh website klien Liradigi.">
 
   <!-- Canonical -->
   <link rel="canonical" href="{{ url()->current() }}">
@@ -66,15 +66,39 @@
   @include('website.layouts.header')
 
   <!-- HERO SECTION -->
+<!-- HERO SECTION -->
   <section class="relative min-h-[40vh] flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 pt-28 md:pt-16 overflow-hidden">
     <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/triangular.png')] opacity-25"></div>
     <div class="relative text-center text-white px-6" data-aos="fade-down">
       <h1 class="text-4xl md:text-5xl font-bold mb-4">Portfolio Kami</h1>
-      <p class="text-blue-100 max-w-2xl mx-auto">
-        Beberapa project unggulan yang telah kami kerjakan untuk berbagai klien dari berbagai industri.
-      </p>
+<!-- Breadcrumb -->
+        <nav class="text-sm flex justify-center" aria-label="Breadcrumb">
+            <ol class="flex items-center gap-2 text-white/80">
+                <li>
+                    <a href="{{ route('web.home') }}" class="hover:text-yellow-500 transition flex items-center">
+                        <i class="fa fa-home mr-1"></i> Home
+                    </a>
+                </li>
+
+                <li><span class="opacity-70">/</span></li>
+
+                <li class="font-semibold text-white">
+                    Cara Order
+                </li>
+            </ol>
+        </nav>
     </div>
   </section>
+
+
+
+    <section class="px-6 max-w-4xl mx-auto mt-10 text-center">
+    <p class="text-gray-600 mb-8">
+        Liradigi telah mengerjakan berbagai jenis website untuk beragam industri,
+        seperti company profile, travel, kontraktor, UMKM, dan lainnya.
+        Semua website dibangun dengan desain modern, cepat, aman, dan mobile friendly.
+    </p>
+    </section>
 
   <!-- PORTFOLIO GRID -->
   <section class="py-20 bg-white relative">
