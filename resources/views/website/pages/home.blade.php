@@ -97,7 +97,7 @@
             </div>
 
             <!-- Cards -->
-            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
 
                 <!-- Card 1 -->
                 <div class="p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition bg-gradient-to-b from-blue-300 to-blue-50"
