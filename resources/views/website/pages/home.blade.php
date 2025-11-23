@@ -206,7 +206,7 @@
             <!-- Heading -->
             <div class="mb-12" data-aos="zoom-in">
                 <h2 class="text-3xl md:text-4xl font-bold text-[#136ad5] mb-4">
-                    Kami Ada Menjawab Semua Masalah
+                    Kami Hadir Menjawab Semua Masalah
                 </h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">
                     Kami hadir bukan hanya untuk membuat website, tetapi memberikan solusi dari berbagai masalah yang sering dialami pelaku bisnis.
