@@ -82,11 +82,11 @@
         </div>
     </section>
 
-    <section class="py-20 bg-white" id="masalah" data-aos="fade-right">
+    <section class="py-20 bg-white" id="masalah" data-aos="zoom-in">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
             <!-- LEFT TEXT -->
-            <div class="space-y-5" data-aos="fade-right" data-aos-duration="800">
+            <div class="space-y-5" data-aos="zoom-in" data-aos-duration="800">
                 <span class="inline-block bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-medium">
                     Kenapa Bisnis Kamu Perlu Website?
                 </span>
@@ -118,7 +118,7 @@
                     before:opacity-20
                     hover:scale-[1.03] hover:-translate-y-1 hover:shadow-[12px_12px_28px_rgba(0,0,0,0.35),-6px_-6px_18px_rgba(255,255,255,0.25)]
                     transition-all duration-300"
-                    data-aos="fade-down-right" data-aos-delay="100">
+                    data-aos="zoom-in" data-aos-delay="200">
 
                     <div class="text-4xl mb-3 drop-shadow-md">
                         <i class="fa-solid fa-circle-question text-yellow-300"></i>
@@ -143,7 +143,7 @@
                     before:opacity-20
                     hover:scale-[1.03] hover:-translate-y-1 hover:shadow-[12px_12px_28px_rgba(0,0,0,0.35),-6px_-6px_18px_rgba(255,255,255,0.25)]
                     transition-all duration-300"
-                    data-aos="fade-down-left" data-aos-delay="100">
+                    data-aos="zoom-in" data-aos-delay="200">
                     <div class="text-4xl mb-3">
                         <i class="fa-solid fa-user-xmark text-yellow-300"></i>
                     </div>
@@ -164,7 +164,7 @@
                     before:opacity-20
                     hover:scale-[1.03] hover:-translate-y-1 hover:shadow-[12px_12px_28px_rgba(0,0,0,0.35),-6px_-6px_18px_rgba(255,255,255,0.25)]
                     transition-all duration-300"
-                    data-aos="fade-up-right" data-aos-delay="300">
+                    data-aos="zoom-in" data-aos-delay="200">
                     <div class="text-4xl mb-3">
                         <i class="fa-solid fa-triangle-exclamation text-yellow-300"></i>
                     </div>
@@ -185,7 +185,7 @@
                     before:opacity-20
                     hover:scale-[1.03] hover:-translate-y-1 hover:shadow-[12px_12px_28px_rgba(0,0,0,0.35),-6px_-6px_18px_rgba(255,255,255,0.25)]
                     transition-all duration-300"
-                    data-aos="fade-up-left" data-aos-delay="400">
+                    data-aos="zoom-in" data-aos-delay="200">
                     <div class="text-4xl mb-3">
                         <i class="fa-solid fa-headset text-yellow-300"></i>
                     </div>
@@ -227,7 +227,7 @@
                     before:opacity-20
                     hover:scale-[1.03] hover:-translate-y-1 hover:shadow-[12px_12px_28px_rgba(0,0,0,0.35),-6px_-6px_18px_rgba(255,255,255,0.25)]
                     transition-all duration-400"
-                    data-aos="fade-right" data-aos-delay="100">
+                    data-aos="zoom-in" data-aos-delay="200">
                     <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
                         <i class="fa-solid fa-lightbulb text-yellow-300 text-2xl sm:text-3xl"></i>
                     </div>
@@ -248,7 +248,7 @@
                     before:opacity-20
                     hover:scale-[1.03] hover:-translate-y-1 hover:shadow-[12px_12px_28px_rgba(0,0,0,0.35),-6px_-6px_18px_rgba(255,255,255,0.25)]
                     transition-all duration-300"
-                    data-aos="fade-right" data-aos-delay="50">
+                    data-aos="zoom-in" data-aos-delay="200">
                     <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
                         <i class="fa-solid fa-circle-check text-yellow-300 text-2xl sm:text-3xl"></i>
                     </div>
@@ -269,7 +269,7 @@
                     before:opacity-20
                     hover:scale-[1.03] hover:-translate-y-1 hover:shadow-[12px_12px_28px_rgba(0,0,0,0.35),-6px_-6px_18px_rgba(255,255,255,0.25)]
                     transition-all duration-300"
-                    data-aos="fade-left" data-aos-delay="50">
+                    data-aos="zoom-in" data-aos-delay="200">
                     <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
                         <i class="fa-solid fa-chart-line text-yellow-300 text-2xl sm:text-3xl"></i>
                     </div>
@@ -290,7 +290,7 @@
                     before:opacity-20
                     hover:scale-[1.03] hover:-translate-y-1 hover:shadow-[12px_12px_28px_rgba(0,0,0,0.35),-6px_-6px_18px_rgba(255,255,255,0.25)]
                     transition-all duration-300"
-                    data-aos="fade-left" data-aos-delay="400">
+                    data-aos="zoom-in" data-aos-delay="200">
                     <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
                         <i class="fa-solid fa-handshake text-yellow-300 text-2xl sm:text-3xl"></i>
                     </div>
@@ -399,63 +399,62 @@
         </div>
     </section>
 
-    <section class="py-20 bg-gradient-to-b from-white to-blue-50" id="teknologi">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-        <!-- LEFT TEXT -->
-        <div data-aos="fade-right">
-            <h2 class="text-3xl md:text-4xl font-bold text-[#136ad5] mb-3">
-                Teknologi yang Kami Gunakan
-            </h2>
-            <p class="text-gray-600 mb-8 leading-relaxed">
-                Kami menggunakan teknologi modern dan terpercaya untuk memastikan website Anda cepat,
-                aman, dan stabil.
-            </p>
+    <section class="py-20 bg-gradient-to-b from-white to-blue-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+            <!-- LEFT TEXT -->
+            <div data-aos="zoom-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#136ad5] mb-3">
+                    Teknologi yang Kami Gunakan
+                </h2>
+                <p class="text-gray-600 mb-8 leading-relaxed">
+                    Kami menggunakan teknologi modern dan terpercaya untuk memastikan website Anda cepat,
+                    aman, dan stabil.
+                </p>
+            </div>
+
+            <!-- RIGHT BUBBLE ICONS -->
+            <div class="relative grid grid-cols-3 gap-6 md:gap-8 place-items-center h-auto" data-aos="zoom-in">
+
+                <!-- Laravel -->
+                <div class="w-24 md:w-28 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:shadow-2xl transition">
+                    <img src="{{ asset('assets/website/img/laravel.png') }}" class="w-full h-full object-contain">
+                </div>
+
+                <!-- PHP -->
+                <div class="w-20 md:w-24 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:shadow-2xl transition">
+                    <img src="{{ asset('assets/website/img/php.png') }}" class="w-full h-full object-contain">
+                </div>
+
+                <!-- MySQL -->
+                <div class="w-20 md:w-24 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:shadow-2xl transition">
+                    <img src="{{ asset('assets/website/img/mysql.png') }}" class="w-full h-full object-contain">
+                </div>
+
+                <!-- Tailwind -->
+                <div class="w-24 md:w-28 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-5 hover:shadow-2xl transition">
+                    <img src="{{ asset('assets/website/img/tailwind.png') }}" class="w-full h-full object-contain">
+                </div>
+
+                <!-- JS -->
+                <div class="w-20 md:w-24 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:shadow-2xl transition">
+                    <img src="{{ asset('assets/website/img/js.png') }}" class="w-full h-full object-contain">
+                </div>
+
+                <!-- Bootstrap -->
+                <div class="w-20 md:w-24 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:shadow-2xl transition">
+                    <img src="{{ asset('assets/website/img/bootstrap.png') }}" class="w-full h-full object-contain">
+                </div>
+                <!-- Bootstrap -->
+                <div class="w-20 md:w-24 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:shadow-2xl transition">
+                    <img src="{{ asset('assets/website/img/cloudflare.png') }}" class="w-full h-full object-contain">
+                </div>
+
+            </div>
+
         </div>
-
-        <!-- RIGHT BUBBLE ICONS -->
-        <div class="relative grid grid-cols-3 gap-6 md:gap-8 place-items-center h-auto" data-aos="fade-left">
-
-            <!-- Laravel -->
-            <div class="w-24 md:w-28 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:scale-105 transition">
-                <img src="{{ asset('assets/website/img/laravel.png') }}" class="w-full h-full object-contain">
-            </div>
-
-            <!-- PHP -->
-            <div class="w-20 md:w-24 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:scale-105 transition">
-                <img src="{{ asset('assets/website/img/php.png') }}" class="w-full h-full object-contain">
-            </div>
-
-            <!-- MySQL -->
-            <div class="w-20 md:w-24 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:scale-105 transition">
-                <img src="{{ asset('assets/website/img/mysql.png') }}" class="w-full h-full object-contain">
-            </div>
-
-            <!-- Tailwind -->
-            <div class="w-24 md:w-28 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-5 hover:scale-105 transition">
-                <img src="{{ asset('assets/website/img/tailwind.png') }}" class="w-full h-full object-contain">
-            </div>
-
-            <!-- JS -->
-            <div class="w-20 md:w-24 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:scale-105 transition">
-                <img src="{{ asset('assets/website/img/js.png') }}" class="w-full h-full object-contain">
-            </div>
-
-            <!-- Bootstrap -->
-            <div class="w-20 md:w-24 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:scale-105 transition">
-                <img src="{{ asset('assets/website/img/bootstrap.png') }}" class="w-full h-full object-contain">
-            </div>
-            <!-- Bootstrap -->
-            <div class="w-20 md:w-24 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:scale-105 transition">
-                <img src="{{ asset('assets/website/img/cloudflare.png') }}" class="w-full h-full object-contain">
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
+    </section>
 
 
     <section class="py-20 bg-gradient-to-b from-white to-blue-50 overflow-hidden">

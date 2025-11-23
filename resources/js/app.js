@@ -17,14 +17,18 @@ window.Alpine = Alpine
 
 Alpine.start()
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
     AOS.init({
-        duration: 900,      // durasi animasi (ms)
-        once: true,         // hanya animasi sekali
-        offset: 80,         // jarak sebelum muncul
-        easing: 'ease-out', // jenis efek transisi
+        duration: 900,
+        once: true,
+        offset: 80,
+        easing: 'ease-out',
+        disableMutationObserver: true,   // ← WAJIB agar tidak rusak posisi
     })
-})
+
+    // Force recalc agar header tidak hilang
+    window.dispatchEvent(new Event('scroll'));
+});
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -98,4 +102,5 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener('DOMContentLoaded', () => {
     Prism.highlightAll();
 });
+
 
