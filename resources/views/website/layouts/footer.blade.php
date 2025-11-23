@@ -27,10 +27,10 @@
       <div>
         <h3 class="text-lg font-semibold mb-4 text-white">Menu Cepat</h3>
         <ul class="space-y-2 text-blue-100">
-          <li><a href="{{ url('/') }}" class="hover:text-yellow-400 transition">Beranda</a></li>
-          <li><a href="{{ route('web.portfolios') }}" class="hover:text-yellow-400 transition">Portfolio</a></li>
-          <li><a href="{{route('web.howtoorder')}}" class="hover:text-yellow-400 transition">Cara Order</a></li>
-          <li><a href="{{route('web.articles')}}" class="hover:text-yellow-400 transition">Artikel</a></li>
+          <li><a href="{{ url('/') }}" class="hover:text-yellow-300 transition">Beranda</a></li>
+          <li><a href="{{ route('web.portfolios') }}" class="hover:text-yellow-300 transition">Portfolio</a></li>
+          <li><a href="{{route('web.howtoorder')}}" class="hover:text-yellow-300 transition">Cara Order</a></li>
+          <li><a href="{{route('web.articles')}}" class="hover:text-yellow-300 transition">Artikel</a></li>
         </ul>
       </div>
 
@@ -39,7 +39,7 @@
         <h4 class="text-lg font-semibold mb-4 text-white">Layanan Kami</h4>
         <ul class="space-y-2 text-blue-100">
         @foreach($services as $service)
-          <li><i class="fa-solid fa-circle-check mr-2 text-yellow-500"></i><a href="{{ route('web.service.detail', $service->slug) }}">{{$service->name}}</a></li>
+          <li><i class="fa-solid fa-circle-check mr-2 text-yellow-300"></i><a href="{{ route('web.service.detail', $service->slug) }}">{{$service->name}}</a></li>
           @endforeach
         </ul>
       </div>
@@ -48,13 +48,13 @@
       <div>
         <h4 class="text-lg font-semibold mb-4 text-white">Hubungi Kami</h4>
         <ul class="space-y-3 text-blue-100 text-sm">
-          <li><i class="fa-solid fa-location-dot text-yellow-500 mr-2"></i>{{$contacts->address}}</li>
-          <li><i class="fa-solid fa-phone text-yellow-500 mr-2"></i>+{{$contacts->phone}}</li>
-          <li><i class="fa-solid fa-envelope text-yellow-500 mr-2"></i>{{$contacts->email}}</li>
+          <li><i class="fa-solid fa-location-dot text-yellow-300 mr-2"></i>{{$contacts->address}}</li>
+          <li><i class="fa-solid fa-phone text-yellow-300 mr-2"></i>+{{$contacts->phone}}</li>
+          <li><i class="fa-solid fa-envelope text-yellow-300 mr-2"></i>{{$contacts->email}}</li>
           <li class="flex items-center">
-            <i class="fa-brands fa-whatsapp text-yellow-500 mr-2"></i>
+            <i class="fa-brands fa-whatsapp text-yellow-300 mr-2"></i>
             <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20Liradigi%2C%20saya%20tertarik%20untuk%20membuat%20website.%20Bisa%20minta%20informasi%20lebih%20lanjut%3F" target="_blank">Chat via WhatsApp</a>
-            <span class="ml-2 bg-yellow-500/10 text-yellow-400 text-xs font-semibold px-2 py-0.5 rounded-full animate-pulse">
+            <span class="ml-2 bg-yellow-500/10 text-yellow-300 text-xs font-semibold px-2 py-0.5 rounded-full animate-pulse">
                 Online
             </span>
             </li>

@@ -10,12 +10,12 @@
 
 
     <title>Jasa Pembuatan Website Profesional & Terpercaya untuk Bisnis Anda - Liradigi</title>
-    <meta name="description" content="Liradigi adalah digital agency yang membantu bisnis Anda tampil unggul di dunia digital melalui pembuatan website profesional, cepat, dan SEO-friendly.">
+    <meta name="description" content="Liradigi gak cuma bikin website bagus, tapi juga Teman Digital Bisnis Kamu yang Bisa urus semua kebutuhan website dari SEO sampai Ads.">
     <meta name="keywords" content="Liradigi, jasa pembuatan website, digital agency, web design, website UMKM, web instansi, jasa buat website murah, SEO website">
     <meta name="author" content="Liradigi Digital Agency">
 
     <!-- ✅ Open Graph / Facebook -->
-    <meta property="og:title" content="Liradigi - Jasa Pembuatan Website Profesional & Terpercaya untuk Bisnis Anda">
+    <meta property="og:title" content="Jasa Pembuatan Website Profesional & Terpercaya untuk Bisnis Anda - Liradigi">
     <meta property="og:description" content="Kami bantu Anda membangun website profesional, cepat, dan modern agar bisnis tampil unggul di dunia digital.">
     <meta property="og:image" content="{{ asset('assets/website/img/og-liradigi.webp') }}">
     <meta property="og:url" content="{{ url()->current() }}">
@@ -24,7 +24,7 @@
 
     <!-- ✅ Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Liradigi - Partner Digital untuk Bisnis Anda">
+    <meta name="twitter:title" content="Jasa Pembuatan Website Profesional & Terpercaya untuk Bisnis Anda - Liradigi">
     <meta name="twitter:description" content="Digital agency spesialis pembuatan website profesional dan terpercaya.">
     <meta name="twitter:image" content="{{ asset('assets/website/img/og-liradigi.webp') }}">
 
@@ -58,14 +58,14 @@
                     Partner Digital Untuk Bisnis Anda
                 </h1>
                 <p class="text-blue-100 text-base md:text-lg">
-                    Kami membangun website profesional dengan kualitas terbaik—cepat, stabil, dan dioptimalkan untuk Google Analytics, SEO, dan CTR yang tinggi, sehingga bisnis Anda tampil lebih unggul dan mudah ditemukan di dunia digital.
+                    Kamu tidak hanya mendapatkan <strong class="text-yellow-300">Website Bagus</strong>, <br>Tapi kamu mendapatkan <strong class="text-yellow-300">Partner Digital</strong> yang bisa bantu <strong class="text-yellow-300">Bisnis Kamu</strong> Melalui Platform Website dari Perencanaan, Pengembangan sampai Optimasi .
                 </p>
 
                 <div class="flex flex-wrap justify-center md:justify-start gap-3">
-                    <a href="{{ url('/cara-order') }}" class="px-5 py-2.5 bg-white text-[#136ad5] rounded-xl font-semibold shadow hover:bg-yellow-500 hover:text-white transition">
+                    <a href="{{ route('web.howtoorder') }}" class="px-5 py-2.5 bg-white text-[#136ad5] rounded-xl font-semibold shadow hover:bg-yellow-500 hover:text-white transition">
                         Diskusi Sekarang
                     </a>
-                    <a href="{{ url('/portfolio') }}" class="px-5 py-2.5 border-2 border-white text-white rounded-xl font-medium hover:bg-white hover:text-[#136ad5] transition">
+                    <a href="{{ route('web.portfolios') }}" class="px-5 py-2.5 border-2 border-yellow-300 text-yellow-300 rounded-xl font-medium hover:bg-white hover:text-[#136ad5] transition">
                         Lihat Portfolio
                     </a>
                 </div>
@@ -82,17 +82,134 @@
         </div>
     </section>
 
+    <section class="py-20 bg-white" id="masalah" data-aos="fade-right">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+            <!-- LEFT TEXT -->
+            <div class="space-y-5" data-aos="fade-right" data-aos-duration="800">
+                <span class="inline-block bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-medium">
+                    Kenapa Bisnis Kamu Perlu Website?
+                </span>
+
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-600 leading-snug">
+                    Masalah yang Sering Dialami <span class="text-blue-600">Pelaku Bisnis</span>
+                </h2>
+
+                <p class="text-gray-600 text-base md:text-lg">
+                    Banyak pelaku bisnis ingin memiliki website profesional, tetapi sering terhambat oleh berbagai masalah berikut.
+                </p>
+
+                <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20Liradigi%2C%20saya%20tertarik%20untuk%20membuat%20website.%20Bisa%20minta%20informasi%20lebih%20lanjut%3F" target="_blank" class="px-5 py-2.5 bg-[#136ad5] text-white rounded-xl font-semibold shadow hover:bg-yellow-500 hover:text-white transition" data-aos="zoom-in" data-aos-delay="200">
+                    Diskusi Sekarang
+                </a>
+            </div>
+
+            <!-- RIGHT CARDS -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+                <!-- Card 1 -->
+                <div class="p-6 rounded-2xl text-white
+                    bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700
+                    shadow-[8px_8px_20px_rgba(0,0,0,0.25),-4px_-4px_12px_rgba(255,255,255,0.15)]
+                    border border-blue-400/20
+                    relative overflow-hidden
+                    before:absolute before:inset-0
+                    before:bg-gradient-to-tl before:from-white/10 before:to-transparent
+                    before:opacity-20
+                    hover:scale-[1.03] hover:-translate-y-1 hover:shadow-[12px_12px_28px_rgba(0,0,0,0.35),-6px_-6px_18px_rgba(255,255,255,0.25)]
+                    transition-all duration-300"
+                    data-aos="fade-down-right" data-aos-delay="100">
+
+                    <div class="text-4xl mb-3 drop-shadow-md">
+                        <i class="fa-solid fa-circle-question text-yellow-300"></i>
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-1 drop-shadow-sm">Bingung Mulai Dari Mana</h3>
+
+                    <p class="text-blue-100 text-sm drop-shadow-sm">
+                        Tidak tahu harus mulai dari desain, struktur halaman, atau fitur apa yang dibutuhkan.
+                    </p>
+                </div>
+
+
+                <!-- Card 2 -->
+                <div class="p-6 rounded-2xl text-white
+                    bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700
+                    shadow-[8px_8px_20px_rgba(0,0,0,0.25),-4px_-4px_12px_rgba(255,255,255,0.15)]
+                    border border-blue-400/20
+                    relative overflow-hidden
+                    before:absolute before:inset-0
+                    before:bg-gradient-to-tl before:from-white/10 before:to-transparent
+                    before:opacity-20
+                    hover:scale-[1.03] hover:-translate-y-1 hover:shadow-[12px_12px_28px_rgba(0,0,0,0.35),-6px_-6px_18px_rgba(255,255,255,0.25)]
+                    transition-all duration-300"
+                    data-aos="fade-down-left" data-aos-delay="100">
+                    <div class="text-4xl mb-3">
+                        <i class="fa-solid fa-user-xmark text-yellow-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">Sulit Menemukan Agency Terpercaya</h3>
+                    <p class="text-blue-100 text-sm">
+                        Banyak klien takut pengerjaan tidak selesai atau hasilnya tidak sesuai harapan.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-6 rounded-2xl text-white
+                    bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700
+                    shadow-[8px_8px_20px_rgba(0,0,0,0.25),-4px_-4px_12px_rgba(255,255,255,0.15)]
+                    border border-blue-400/20
+                    relative overflow-hidden
+                    before:absolute before:inset-0
+                    before:bg-gradient-to-tl before:from-white/10 before:to-transparent
+                    before:opacity-20
+                    hover:scale-[1.03] hover:-translate-y-1 hover:shadow-[12px_12px_28px_rgba(0,0,0,0.35),-6px_-6px_18px_rgba(255,255,255,0.25)]
+                    transition-all duration-300"
+                    data-aos="fade-up-right" data-aos-delay="300">
+                    <div class="text-4xl mb-3">
+                        <i class="fa-solid fa-triangle-exclamation text-yellow-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">Website Tidak Sesuai Kebutuhan Bisnis</h3>
+                    <p class="text-blue-100 text-sm">
+                        Fokus hanya pada desain, bukan pada value dan tujuan bisnis jangka panjang.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="p-6 rounded-2xl text-white
+                    bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700
+                    shadow-[8px_8px_20px_rgba(0,0,0,0.25),-4px_-4px_12px_rgba(255,255,255,0.15)]
+                    border border-blue-400/20
+                    relative overflow-hidden
+                    before:absolute before:inset-0
+                    before:bg-gradient-to-tl before:from-white/10 before:to-transparent
+                    before:opacity-20
+                    hover:scale-[1.03] hover:-translate-y-1 hover:shadow-[12px_12px_28px_rgba(0,0,0,0.35),-6px_-6px_18px_rgba(255,255,255,0.25)]
+                    transition-all duration-300"
+                    data-aos="fade-up-left" data-aos-delay="400">
+                    <div class="text-4xl mb-3">
+                        <i class="fa-solid fa-headset text-yellow-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">Tidak Ada Support Setelah Website Live</h3>
+                    <p class="text-blue-100 text-sm">
+                        Banyak jasa website selesai project lalu tidak memberikan pendampingan jangka panjang.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Section: Kenapa Memilih Kami -->
     <section class="py-20 bg-white" id="kenapa-memilih-kami">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
 
             <!-- Heading -->
-            <div class="mb-12" data-aos="fade-up">
+            <div class="mb-12" data-aos="zoom-in">
                 <h2 class="text-3xl md:text-4xl font-bold text-[#136ad5] mb-4">
-                    Kenapa Memilih Kami?
+                    Kami Ada Menjawab Semua Masalah
                 </h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">
-                    Kami berkomitmen memberikan solusi digital terbaik agar bisnis Anda dapat berkembang dengan cepat, efisien, dan profesional.
+                    Kami hadir bukan hanya untuk membuat website, tetapi memberikan solusi dari berbagai masalah yang sering dialami pelaku bisnis.
                 </p>
             </div>
 
@@ -100,56 +217,93 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
 
                 <!-- Card 1 -->
-                <div class="p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition bg-gradient-to-b from-blue-300 to-blue-50"
-                    data-aos="zoom-in" data-aos-delay="100">
+                <div class="p-6 rounded-2xl text-white
+                    bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700
+                    shadow-[8px_8px_20px_rgba(0,0,0,0.25),-4px_-4px_12px_rgba(255,255,255,0.15)]
+                    border border-blue-400/20
+                    relative overflow-hidden
+                    before:absolute before:inset-0
+                    before:bg-gradient-to-tl before:from-white/10 before:to-transparent
+                    before:opacity-20
+                    hover:scale-[1.03] hover:-translate-y-1 hover:shadow-[12px_12px_28px_rgba(0,0,0,0.35),-6px_-6px_18px_rgba(255,255,255,0.25)]
+                    transition-all duration-400"
+                    data-aos="fade-right" data-aos-delay="100">
                     <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
-                        <i class="fa-solid fa-palette text-white text-2xl sm:text-3xl"></i>
+                        <i class="fa-solid fa-lightbulb text-yellow-300 text-2xl sm:text-3xl"></i>
                     </div>
-                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-2">Desain Profesional</h3>
-                    <p class="text-gray-600 text-sm sm:text-base">
-                        Website dengan tampilan modern dan pengalaman pengguna optimal.
+                    <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Dibimbing Dari Nol</h3>
+                    <p class="text-gray-50 text-sm sm:text-base">
+                        Kami membantu Anda dari menentukan kebutuhan, struktur website, hingga fitur yang tepat—tanpa bingung memulai.
                     </p>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition bg-gradient-to-b from-blue-300 to-blue-50"
-                    data-aos="zoom-in" data-aos-delay="200">
+                <div class="p-6 rounded-2xl text-white
+                    bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700
+                    shadow-[8px_8px_20px_rgba(0,0,0,0.25),-4px_-4px_12px_rgba(255,255,255,0.15)]
+                    border border-blue-400/20
+                    relative overflow-hidden
+                    before:absolute before:inset-0
+                    before:bg-gradient-to-tl before:from-white/10 before:to-transparent
+                    before:opacity-20
+                    hover:scale-[1.03] hover:-translate-y-1 hover:shadow-[12px_12px_28px_rgba(0,0,0,0.35),-6px_-6px_18px_rgba(255,255,255,0.25)]
+                    transition-all duration-300"
+                    data-aos="fade-right" data-aos-delay="50">
                     <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
-                        <i class="fa-solid fa-bolt text-white text-2xl sm:text-3xl"></i>
+                        <i class="fa-solid fa-circle-check text-yellow-300 text-2xl sm:text-3xl"></i>
                     </div>
-                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-2">Cepat & Responsif</h3>
-                    <p class="text-gray-600 text-sm sm:text-base">
-                        Optimasi performa untuk kecepatan tinggi di semua perangkat.
+                    <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Terpercaya & Transparan</h3>
+                    <p class="text-gray-50 text-sm sm:text-base">
+                        Proses pengerjaan jelas, progress rutin, dan hasil sesuai kesepakatan—tanpa takut website mangkrak.
                     </p>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition bg-gradient-to-b from-blue-300 to-blue-50"
-                    data-aos="zoom-in" data-aos-delay="300">
+                <div class="p-6 rounded-2xl text-white
+                    bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700
+                    shadow-[8px_8px_20px_rgba(0,0,0,0.25),-4px_-4px_12px_rgba(255,255,255,0.15)]
+                    border border-blue-400/20
+                    relative overflow-hidden
+                    before:absolute before:inset-0
+                    before:bg-gradient-to-tl before:from-white/10 before:to-transparent
+                    before:opacity-20
+                    hover:scale-[1.03] hover:-translate-y-1 hover:shadow-[12px_12px_28px_rgba(0,0,0,0.35),-6px_-6px_18px_rgba(255,255,255,0.25)]
+                    transition-all duration-300"
+                    data-aos="fade-left" data-aos-delay="50">
                     <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
-                        <i class="fa-solid fa-headset text-white text-2xl sm:text-3xl"></i>
+                        <i class="fa-solid fa-chart-line text-yellow-300 text-2xl sm:text-3xl"></i>
                     </div>
-                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-2">Support Penuh</h3>
-                    <p class="text-gray-600 text-sm sm:text-base">
-                        Dukungan teknis & pemeliharaan berkelanjutan setelah website online.
+                    <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Sesuai Kebutuhan Bisnis</h3>
+                    <p class="text-gray-50 text-sm sm:text-base">
+                        Website dirancang untuk mendukung tujuan bisnis: brand, penjualan, kredibilitas, dan pertumbuhan jangka panjang.
                     </p>
                 </div>
 
                 <!-- Card 4 -->
-                <div class="p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition bg-gradient-to-b from-blue-300 to-blue-50"
-                    data-aos="zoom-in" data-aos-delay="400">
+                <div class="p-6 rounded-2xl text-white
+                    bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700
+                    shadow-[8px_8px_20px_rgba(0,0,0,0.25),-4px_-4px_12px_rgba(255,255,255,0.15)]
+                    border border-blue-400/20
+                    relative overflow-hidden
+                    before:absolute before:inset-0
+                    before:bg-gradient-to-tl before:from-white/10 before:to-transparent
+                    before:opacity-20
+                    hover:scale-[1.03] hover:-translate-y-1 hover:shadow-[12px_12px_28px_rgba(0,0,0,0.35),-6px_-6px_18px_rgba(255,255,255,0.25)]
+                    transition-all duration-300"
+                    data-aos="fade-left" data-aos-delay="400">
                     <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
-                        <i class="fa-solid fa-users text-white text-2xl sm:text-3xl"></i>
+                        <i class="fa-solid fa-handshake text-yellow-300 text-2xl sm:text-3xl"></i>
                     </div>
-                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-2">Tim Berpengalaman</h3>
-                    <p class="text-gray-600 text-sm sm:text-base">
-                        Profesional di bidang desain, pengembangan, & digital marketing.
+                    <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Pendampingan Berkelanjutan</h3>
+                    <p class="text-gray-50 text-sm sm:text-base">
+                        Kami tidak hanya membuat website—kami menjadi partner jangka panjang yang selalu siap membantu.
                     </p>
                 </div>
 
             </div>
         </div>
     </section>
+
 
     <!-- Section: Harga Paket -->
     <section class="relative py-20 bg-gray-50 overflow-hidden" id="harga-paket">
@@ -246,62 +400,61 @@
     </section>
 
     <section class="py-20 bg-gradient-to-b from-white to-blue-50" id="teknologi">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+        <!-- LEFT TEXT -->
+        <div data-aos="fade-right">
             <h2 class="text-3xl md:text-4xl font-bold text-[#136ad5] mb-3">
                 Teknologi yang Kami Gunakan
             </h2>
-            <p class="text-gray-600 mb-12">
-                Kami menggunakan teknologi modern dan terpercaya untuk memastikan website Anda cepat, aman, dan stabil.
+            <p class="text-gray-600 mb-8 leading-relaxed">
+                Kami menggunakan teknologi modern dan terpercaya untuk memastikan website Anda cepat,
+                aman, dan stabil.
             </p>
-
-            @php
-                $techs = [
-                    'php' => 'PHP',
-                    'laravel' => 'Laravel',
-                    'mysql' => 'MySQL',
-                    'cloudflare' => 'Cloudflare',
-                    'bootstrap' => 'Bootstrap',
-                    'tailwind' => 'Tailwind CSS',
-                    'js' => 'Javascript',
-                ];
-            @endphp
-
-            <!-- Container -->
-            <div class="w-full">
-
-                <!-- MOBILE (scroll horizontal) -->
-                <div class="flex gap-6 overflow-x-auto scrollbar-hide md:hidden px-1 py-3">
-                    @foreach ($techs as $key => $label)
-                        <div class="group flex-none w-28 h-28 bg-white rounded-2xl shadow p-5
-                                    flex items-center justify-center transition-all duration-300
-                                    hover:shadow-xl hover:-translate-y-1"
-                            aria-label="{{ $label }}">
-
-                            <img src="{{ asset('assets/website/img/' . $key . '.png') }}"
-                                class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
-                                alt="{{ $label }}">
-                        </div>
-                    @endforeach
-                </div>
-
-                <!-- DESKTOP (all logos) -->
-                <div class="hidden md:flex justify-center flex-wrap gap-10">
-                    @foreach ($techs as $key => $label)
-                        <div class="group w-28 h-28 bg-white rounded-2xl shadow p-5
-                                    flex items-center justify-center transition-all duration-300
-                                    hover:shadow-xl hover:-translate-y-1"
-                            aria-label="{{ $label }}">
-
-                            <img src="{{ asset('assets/website/img/' . $key . '.png') }}"
-                                class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
-                                alt="{{ $label }}">
-                        </div>
-                    @endforeach
-                </div>
-
-            </div>
         </div>
-    </section>
+
+        <!-- RIGHT BUBBLE ICONS -->
+        <div class="relative grid grid-cols-3 gap-6 md:gap-8 place-items-center h-auto" data-aos="fade-left">
+
+            <!-- Laravel -->
+            <div class="w-24 md:w-28 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:scale-105 transition">
+                <img src="{{ asset('assets/website/img/laravel.png') }}" class="w-full h-full object-contain">
+            </div>
+
+            <!-- PHP -->
+            <div class="w-20 md:w-24 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:scale-105 transition">
+                <img src="{{ asset('assets/website/img/php.png') }}" class="w-full h-full object-contain">
+            </div>
+
+            <!-- MySQL -->
+            <div class="w-20 md:w-24 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:scale-105 transition">
+                <img src="{{ asset('assets/website/img/mysql.png') }}" class="w-full h-full object-contain">
+            </div>
+
+            <!-- Tailwind -->
+            <div class="w-24 md:w-28 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-5 hover:scale-105 transition">
+                <img src="{{ asset('assets/website/img/tailwind.png') }}" class="w-full h-full object-contain">
+            </div>
+
+            <!-- JS -->
+            <div class="w-20 md:w-24 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:scale-105 transition">
+                <img src="{{ asset('assets/website/img/js.png') }}" class="w-full h-full object-contain">
+            </div>
+
+            <!-- Bootstrap -->
+            <div class="w-20 md:w-24 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:scale-105 transition">
+                <img src="{{ asset('assets/website/img/bootstrap.png') }}" class="w-full h-full object-contain">
+            </div>
+            <!-- Bootstrap -->
+            <div class="w-20 md:w-24 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:scale-105 transition">
+                <img src="{{ asset('assets/website/img/cloudflare.png') }}" class="w-full h-full object-contain">
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
 
 
 

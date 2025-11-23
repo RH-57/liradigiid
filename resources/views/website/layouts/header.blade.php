@@ -15,13 +15,13 @@
       <!-- Desktop Menu (center) -->
       <nav class="hidden md:flex flex-1 justify-center space-x-8 text-white font-semibold">
         <a href="{{ route('web.home') }}"
-        class="{{ request()->routeIs('web.home') ? 'text-orange-300' : 'hover:text-orange-300' }} transition">
+        class="{{ request()->routeIs('web.home') ? 'text-yellow-300' : 'hover:text-yellow-300' }} transition">
         Beranda
         </a>
 
         <!-- Dropdown -->
         <div class="relative" @mouseenter="dropdown = true" @mouseleave="dropdown = false">
-          <button class="flex items-center hover:text-orange-300 transition">
+          <button class="flex items-center hover:text-yellow-300 transition">
             Daftar Layanan
             <svg class="ml-1 w-4 h-4 transform transition-transform" :class="{ 'rotate-180': dropdown }"
               xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -47,15 +47,15 @@
         </div>
 
         <a href="{{ route('web.portfolios') }}"
-        class="{{ request()->routeIs('web.portfolios') ? 'text-orange-300' : 'hover:text-orange-300' }} transition">
+        class="{{ request()->routeIs('web.portfolios') ? 'text-yellow-300' : 'hover:text-yellow-300' }} transition">
         Portfolio
         </a>
         <a href="{{ route('web.howtoorder') }}"
-        class="{{ request()->routeIs('web.howtoorder') ? 'text-orange-300' : 'hover:text-orange-300' }} transition">
+        class="{{ request()->routeIs('web.howtoorder') ? 'text-yellow-300' : 'hover:text-yellow-300' }} transition">
         Cara Order
         </a>
         <a href="{{ route('web.articles') }}"
-        class="{{ request()->routeIs('web.articles') ? 'text-orange-300' : 'hover:text-orange-300' }} transition">
+        class="{{ request()->routeIs('web.articles') ? 'text-yellow-300' : 'hover:text-yellow-300' }} transition">
         Artikel
         </a>
       </nav>
