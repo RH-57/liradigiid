@@ -100,7 +100,7 @@
                 </p>
 
                 <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20Liradigi%2C%20saya%20tertarik%20untuk%20membuat%20website.%20Bisa%20minta%20informasi%20lebih%20lanjut%3F" target="_blank" class="px-5 py-2.5 bg-[#136ad5] text-white rounded-xl font-semibold shadow hover:bg-yellow-500 hover:text-white transition" data-aos="zoom-in" data-aos-delay="200">
-                    Diskusi Sekarang
+                    Konsultasi Sekarang
                 </a>
             </div>
 
