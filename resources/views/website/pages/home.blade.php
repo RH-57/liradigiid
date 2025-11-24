@@ -88,7 +88,7 @@
             <!-- LEFT TEXT -->
             <div class="space-y-5" data-aos="zoom-in" data-aos-duration="800">
                 <span class="inline-block bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-medium">
-                    Kenapa Bisnis Kamu Perlu Website?
+                    Apakah kamu menemukan masalah ini?
                 </span>
 
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-600 leading-snug">

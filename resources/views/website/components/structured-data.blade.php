@@ -1,6 +1,6 @@
 <!-- Structured Data for Liradigi -->
 <script type="application/ld+json">
-@verbatim
+    @verbatim
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -8,19 +8,19 @@
   "url": "https://liradigi.id",
   "logo": "https://liradigi.id/assets/website/img/logo.png",
   "sameAs": [
-    "https://www.instagram.com/liradigi",
+    "https://www.instagram.com/liradigi.id"
   ],
-  "description": "Liradigi adalah digital agency yang membantu membangun website profesional dan cepat agar bisnis Anda tampil unggul di dunia digital. ",
+  "description": "Liradigi adalah digital agency yang membantu membangun website profesional dan cepat agar bisnis Anda tampil unggul di dunia digital.",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Indonesia",
     "addressRegion": "ID",
-    "streetAddress": "Jl. Contoh No. 123",
-    "postalCode": "12345"
+    "streetAddress": "Jl. Basmol Raya (GRAHA 161), Kembangan Utara, Kembangan, Jakarta Barat",
+    "postalCode": "11610"
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+62-812-3456-7890",
+    "telephone": "+62-852-1386-1496",
     "contactType": "customer service",
     "areaServed": "ID",
     "availableLanguage": "Indonesian"
@@ -31,17 +31,13 @@
 
 <!-- Optional: Schema for Website -->
 <script type="application/ld+json">
-@verbatim
+    @verbatim
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Liradigi",
-  "url": "https://liradigi.id",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://liradigi.id/?s={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
+  "url": "https://liradigi.id"
 }
 @endverbatim
 </script>
+
