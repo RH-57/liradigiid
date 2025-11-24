@@ -40,6 +40,7 @@
     </noscript>
 
     @include('website.components.google-tag-header')
+    @include('website.components.google-tag-footer')
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
