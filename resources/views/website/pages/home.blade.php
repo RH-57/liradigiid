@@ -419,36 +419,36 @@
 
                 <!-- Laravel -->
                 <div class="w-24 md:w-28 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:shadow-2xl transition">
-                    <img src="{{ asset('assets/website/img/laravel.png') }}" class="w-full h-full object-contain">
+                    <img src="{{ asset('assets/website/img/laravel.png') }}" class="w-full h-full object-contain" alt="Teknologi">
                 </div>
 
                 <!-- PHP -->
                 <div class="w-20 md:w-24 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:shadow-2xl transition">
-                    <img src="{{ asset('assets/website/img/php.png') }}" class="w-full h-full object-contain">
+                    <img src="{{ asset('assets/website/img/php.png') }}" class="w-full h-full object-contain" alt="Teknologi">
                 </div>
 
                 <!-- MySQL -->
                 <div class="w-20 md:w-24 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:shadow-2xl transition">
-                    <img src="{{ asset('assets/website/img/mysql.png') }}" class="w-full h-full object-contain">
+                    <img src="{{ asset('assets/website/img/mysql.png') }}" class="w-full h-full object-contain" alt="Teknologi">
                 </div>
 
                 <!-- Tailwind -->
                 <div class="w-24 md:w-28 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-5 hover:shadow-2xl transition">
-                    <img src="{{ asset('assets/website/img/tailwind.png') }}" class="w-full h-full object-contain">
+                    <img src="{{ asset('assets/website/img/tailwind.png') }}" class="w-full h-full object-contain" alt="Teknologi">
                 </div>
 
                 <!-- JS -->
                 <div class="w-20 md:w-24 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:shadow-2xl transition">
-                    <img src="{{ asset('assets/website/img/js.png') }}" class="w-full h-full object-contain">
+                    <img src="{{ asset('assets/website/img/js.png') }}" class="w-full h-full object-contain" alt="Teknologi">
                 </div>
 
                 <!-- Bootstrap -->
                 <div class="w-20 md:w-24 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:shadow-2xl transition">
-                    <img src="{{ asset('assets/website/img/bootstrap.png') }}" class="w-full h-full object-contain">
+                    <img src="{{ asset('assets/website/img/bootstrap.png') }}" class="w-full h-full object-contain" alt="Teknologi">
                 </div>
                 <!-- Bootstrap -->
                 <div class="w-20 md:w-24 aspect-square bg-white shadow-xl rounded-full flex items-center justify-center p-4 hover:shadow-2xl transition">
-                    <img src="{{ asset('assets/website/img/cloudflare.png') }}" class="w-full h-full object-contain">
+                    <img src="{{ asset('assets/website/img/cloudflare.png') }}" class="w-full h-full object-contain" alt="Teknologi">
                 </div>
 
             </div>
