@@ -141,7 +141,7 @@
 
     <!-- Tombol Pesan Sekarang (mobile) -->
     <div class="pt-2 border-t border-white/30">
-      <a href="{{ url('/cara-order') }}"
+      <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20Liradigi%2C%20saya%20tertarik%20untuk%20membuat%20website.%20Bisa%20minta%20informasi%20lebih%20lanjut%3F"
         class="block text-center px-5 py-2.5 bg-white text-[#136ad5] rounded-xl font-semibold shadow hover:bg-yellow-500 hover:text-white transition">
         Pesan Sekarang
       </a>
