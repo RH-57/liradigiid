@@ -27,6 +27,7 @@
   <meta name="twitter:image" content="{{ asset('assets/website/img/og-liradigi.webp') }}">
 
   @include('website.components.google-tag-header')
+  @include('website.components.google-tag-footer')
 
   <!-- JSON-LD Structured Data -->
   @php
