@@ -202,7 +202,7 @@
                             </ul>
                         @endif
 
-                        <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20Liradigi%2C%20saya%20tertarik%20untuk%20membuat%20Landing%20Page%20{{$package->name}}.%20Bisa%20minta%20informasi%20lebih%20lanjut%3F"
+                        <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20Liradigi%2C%20saya%20tertarik%20untuk%20membuat%20{{$service->name}}%20{{$package->name}}.%20Bisa%20minta%20informasi%20lebih%20lanjut%3F"
                         class="inline-block mt-6 bg-[#136ad5] text-white font-semibold px-5 py-2 rounded-lg hover:bg-yellow-500 hover:text-white transition">
                             Diskusi Sekarang
                         </a>
