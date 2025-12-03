@@ -27,7 +27,7 @@
   <meta name="twitter:image" content="{{ asset('assets/website/img/og-liradigi.webp') }}">
 
   @include('website.components.google-tag-header')
-
+    @include('website.components.google-tag-footer')
   <!-- Schema.org JSON-LD -->
   @php
     $jsonLd = [

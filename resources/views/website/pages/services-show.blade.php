@@ -23,6 +23,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </noscript>
     @include('website.components.google-tag-header')
+    @include('website.components.google-tag-footer')
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>

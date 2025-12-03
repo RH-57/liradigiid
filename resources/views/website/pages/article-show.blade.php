@@ -39,6 +39,7 @@
     <meta name="twitter:creator" content="@liradigi">
 
   @include('website.components.google-tag-header')
+    @include('website.components.google-tag-footer')
 
   {{-- masukkan di <head> --}}
     @php
