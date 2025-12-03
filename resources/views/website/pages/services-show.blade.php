@@ -51,75 +51,6 @@
         </div>
     </section>
 
-    <!-- Section: Kenapa Memilih Kami -->
-    <section class="py-20 bg-white" id="kenapa-memilih-kami">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-
-            <!-- Heading -->
-            <div class="mb-12" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#136ad5] mb-4">
-                    Kenapa Memilih Kami?
-                </h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    Kami berkomitmen memberikan solusi digital terbaik agar bisnis Anda dapat berkembang dengan cepat, efisien, dan profesional.
-                </p>
-            </div>
-
-            <!-- Cards -->
-            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-
-                <!-- Card 1 -->
-                <div class="p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition bg-gradient-to-b from-blue-300 to-blue-50"
-                    data-aos="zoom-in" data-aos-delay="100">
-                    <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
-                        <i class="fa-solid fa-palette text-white text-2xl sm:text-3xl"></i>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-2">Desain Profesional</h3>
-                    <p class="text-gray-600 text-sm sm:text-base">
-                        Website dengan tampilan modern dan pengalaman pengguna optimal.
-                    </p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition bg-gradient-to-b from-blue-300 to-blue-50"
-                    data-aos="zoom-in" data-aos-delay="200">
-                    <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
-                        <i class="fa-solid fa-bolt text-white text-2xl sm:text-3xl"></i>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-2">Cepat & Responsif</h3>
-                    <p class="text-gray-600 text-sm sm:text-base">
-                        Optimasi performa untuk kecepatan tinggi di semua perangkat.
-                    </p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition bg-gradient-to-b from-blue-300 to-blue-50"
-                    data-aos="zoom-in" data-aos-delay="300">
-                    <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
-                        <i class="fa-solid fa-headset text-white text-2xl sm:text-3xl"></i>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-2">Support Penuh</h3>
-                    <p class="text-gray-600 text-sm sm:text-base">
-                        Dukungan teknis & pemeliharaan berkelanjutan setelah website online.
-                    </p>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition bg-gradient-to-b from-blue-300 to-blue-50"
-                    data-aos="zoom-in" data-aos-delay="400">
-                    <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
-                        <i class="fa-solid fa-users text-white text-2xl sm:text-3xl"></i>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-2">Tim Berpengalaman</h3>
-                    <p class="text-gray-600 text-sm sm:text-base">
-                        Profesional di bidang desain, pengembangan, & digital marketing.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
    <!-- Paket Section -->
     <section class="relative py-20 bg-gray-50 overflow-hidden" id="harga-paket">
         <!-- Background dots -->
@@ -130,7 +61,7 @@
             <div class="mb-14" data-aos="fade-up">
                 <h2 class="text-3xl md:text-4xl font-bold text-[#136ad5] mb-3">Paket {{ $service->name }}</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">
-                    Pilih paket terbaik sesuai kebutuhan layanan {{ strtolower($service->name) }} Anda.
+                    {!!$service->description!!}
                 </p>
             </div>
 
@@ -214,6 +145,74 @@
         </div>
     </section>
 
+    <!-- Section: Kenapa Memilih Kami -->
+    <section class="py-20 bg-white" id="kenapa-memilih-kami">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+
+            <!-- Heading -->
+            <div class="mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#136ad5] mb-4">
+                    Kenapa Memilih Kami?
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Kami berkomitmen memberikan solusi digital terbaik agar bisnis Anda dapat berkembang dengan cepat, efisien, dan profesional.
+                </p>
+            </div>
+
+            <!-- Cards -->
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+
+                <!-- Card 1 -->
+                <div class="p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition bg-gradient-to-b from-blue-300 to-blue-50"
+                    data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
+                        <i class="fa-solid fa-palette text-white text-2xl sm:text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-2">Desain Profesional</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">
+                        Website dengan tampilan modern dan pengalaman pengguna optimal.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition bg-gradient-to-b from-blue-300 to-blue-50"
+                    data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
+                        <i class="fa-solid fa-bolt text-white text-2xl sm:text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-2">Cepat & Responsif</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">
+                        Optimasi performa untuk kecepatan tinggi di semua perangkat.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition bg-gradient-to-b from-blue-300 to-blue-50"
+                    data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
+                        <i class="fa-solid fa-headset text-white text-2xl sm:text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-2">Support Penuh</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">
+                        Dukungan teknis & pemeliharaan berkelanjutan setelah website online.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition bg-gradient-to-b from-blue-300 to-blue-50"
+                    data-aos="zoom-in" data-aos-delay="400">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
+                        <i class="fa-solid fa-users text-white text-2xl sm:text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-2">Tim Berpengalaman</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">
+                        Profesional di bidang desain, pengembangan, & digital marketing.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <!-- FAQ Section -->
     <section class="py-20 bg-white">
