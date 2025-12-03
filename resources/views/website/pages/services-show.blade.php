@@ -264,7 +264,7 @@
         <div class="max-w-5xl mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Ingin Konsultasi Lebih Lanjut?</h2>
             <p class="text-blue-100 mb-8">Tim kami siap membantu Anda memilih solusi terbaik untuk kebutuhan {{ strtolower($service->name) }} Anda.</p>
-            <a href="{{ url('/cara-order') }}" class="px-8 py-3 bg-white text-[#136ad5] font-semibold rounded-xl shadow hover:bg-yellow-500 hover:text-white transition">
+            <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20Liradigi%2C%20saya%20tertarik%20untuk%20membuat%20website.%20Bisa%20minta%20informasi%20lebih%20lanjut%3F" class="px-8 py-3 bg-white text-[#136ad5] font-semibold rounded-xl shadow hover:bg-yellow-500 hover:text-white transition">
                 Hubungi Kami Sekarang
             </a>
         </div>
