@@ -118,7 +118,7 @@
             <span class="bg-[#136ad5] text-white text-xs px-3 py-1 rounded-full uppercase">
               {{ $highlightArticle->category ?? 'Artikel' }}
             </span>
-            <a href="">
+            <a href="{{ route('web.articles.show', [$highlightArticle->category, $highlightArticle->slug]) }}">
               <h3 class="text-2xl md:text-3xl font-bold text-gray-800 hover:text-[#136ad5] transition">
                 {{ $highlightArticle->title }}
               </h3>
