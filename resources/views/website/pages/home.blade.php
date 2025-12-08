@@ -348,7 +348,7 @@
         <div class="relative max-w-7xl mx-auto px-6 lg:px-8 text-center">
             <!-- Heading -->
             <div class="mb-14" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#136ad5] mb-3">Paket {{ $service->name }}</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-600 mb-3">Paket Website <span class="text-blue-600">{{ $service->name }}</span></h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">
                     Pilih paket terbaik sesuai kebutuhan layanan {{ strtolower($service->name) }} Anda.
                 </p>
@@ -399,7 +399,7 @@
                                     Diskon {{ $package->discount }}%
                                 </span>
                             @endif
-                            <h4 class="text-[#136ad5] text-4xl font-extrabold mb-4">
+                            <h4 class="text-blue-600 text-4xl font-extrabold mb-4">
                                 Rp {{ number_format($package->price, 0, ',', '.') }}
                             </h4>
                         </div>
@@ -504,10 +504,10 @@
 
     <section class="py-20 bg-gradient-to-b from-white to-blue-50 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-[#136ad5] mb-3" data-aos="fade-up">
-            Portofolio Terbaru
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-600 mb-3">
+            <span class="text-blue-600">Portofolio</span> Terbaru Kami
             </h2>
-            <p class="text-gray-600 mb-12" data-aos="fade-up" data-aos-delay="100">
+            <p class="text-gray-600 mb-12">
             Beberapa portofolio website klien yang pernah kami kerjakan sebelumnya
             </p>
 
