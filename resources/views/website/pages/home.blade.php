@@ -531,8 +531,8 @@
 
     <section class="py-16 bg-gradient-to-b from-white to-blue-50 overflow-hidden" id="testimoni">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-[#136ad5] mb-2" data-aos="fade-up">
-                Apa Kata Klien Kami?
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-600 mb-2" data-aos="fade-up">
+                Apa Kata <span class="text-blue-600">Klien</span> Kami?
             </h2>
             <p class="text-gray-600 mb-10 text-sm md:text-base" data-aos="fade-up" data-aos-delay="100">
                 Cerita singkat dari klien yang telah mempercayakan project mereka bersama <strong>Liradigi</strong>.
@@ -581,8 +581,8 @@
 
     <section class="py-20 bg-gradient-to-b from-white to-blue-50 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-[#136ad5] mb-3" data-aos="fade-up">
-                Artikel Terbaru Kami
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-600 mb-3" data-aos="fade-up">
+                <span class="text-blue-600">Artikel</span> Terbaru Kami
             </h2>
             <p class="text-gray-600 mb-12" data-aos="fade-up" data-aos-delay="100">
                 Temukan Insight seputar Teknologi, Website dan Transformasi Digital yang akan membantu Bisnis Anda Berkembang.
