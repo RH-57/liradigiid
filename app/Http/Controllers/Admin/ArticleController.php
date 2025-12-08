@@ -19,7 +19,7 @@ class ArticleController extends Controller
     {
         $page = request()->get('page', 1);
 
-        $articles = Cache::remember("articles_page_{$page}", 3600, function () {
+        $articles = Cache::remember("admin_articles_page_{$page}", 3600, function () {
             return Article::latest()->paginate(5);
         });
 
@@ -118,7 +118,7 @@ class ArticleController extends Controller
         Cache::forget('home_articles');
         Cache::forget('articles');
         for ($i = 1; $i <= 20; $i++) {
-            Cache::forget("articles_page_{$i}");
+            Cache::forget("admin_articles_page_{$i}");
         }
 
 
@@ -246,7 +246,7 @@ class ArticleController extends Controller
         Cache::forget('home_articles');
         Cache::forget('articles');
         for ($i = 1; $i <= 20; $i++) {
-            Cache::forget("articles_page_{$i}");
+            Cache::forget("admin_articles_page_{$i}");
         }
 
 

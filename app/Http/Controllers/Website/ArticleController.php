@@ -22,7 +22,7 @@ class ArticleController extends Controller
         $mediasocials = Cache::remember('mediasocials', 31536000, fn() => MediaSocial::all());
 
         $page = $request->get('page', 1);
-        $cacheKey = "articles_page_{$page}";
+        $cacheKey = "front_articles_page_{$page}";
 
         $data = Cache::remember($cacheKey, now()->addMinutes(10), function () {
             $highlightArticle = Article::orderByDesc('views')
