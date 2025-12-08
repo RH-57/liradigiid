@@ -278,9 +278,14 @@
                             </ul>
                         @endif
 
-                        <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20Liradigi%2C%20saya%20tertarik%20untuk%20membuat%20{{$service->name}}%20{{$package->name}}.%20Bisa%20minta%20informasi%20lebih%20lanjut%3F"
-                        class="inline-block mt-6 bg-[#136ad5] text-white font-semibold px-5 py-2 rounded-lg hover:bg-yellow-500 hover:text-white transition">
-                            Diskusi Sekarang
+                        <a href="https://wa.me/{{ $contacts->phone }}?text={{ rawurlencode('Halo Liradigi, saya tertarik dengan paket ' . $package->name . '. Bisa minta informasi lebih lanjut?') }}" target="_blank"
+                        class="mt-5 group relative px-6 py-3 font-semibold text-white rounded-2xl shadow-[0_0_20px_6px_rgba(100,109,255,0.8)]
+                            bg-blue-600
+                            hover:bg-yellow-500 hover:text-white
+                            transition-all duration-300 transform hover:-translate-y-1
+                            hover:shadow-[0_0_20px_6px_rgba(255,204,0,0.6)]
+                            overflow-hidden">
+                            Buat Website Sekarang
                         </a>
                     </div>
                 @endforeach
