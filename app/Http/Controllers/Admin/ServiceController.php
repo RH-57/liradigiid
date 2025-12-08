@@ -33,12 +33,12 @@ class ServiceController extends Controller
             'description'           => 'required|string',
             'headline'              => 'required|string|max:255',
             'headline_description'  => 'required|string',
-            'hero_image'            => 'nullable|image|mimes:jpeg,jpg,png,webp|max:4096',
+            'hero_image'            => 'nullable|image|mimes:jpeg,jpg,png,webp|max:8024',
             'status'                => 'required|in:active,inactive',
             'meta_title'            => 'nullable|string|max:255',
             'meta_description'      => 'nullable|string',
             'meta_keywords'         => 'nullable|string|max:255',
-            'meta_image'            => 'nullable|image|mimes:jpeg,jpg,png,webp|max:4096',
+            'meta_image'            => 'nullable|image|mimes:jpeg,jpg,png,webp|max:8024',
         ]);
 
         $baseSlug = Str::slug($request->name);
@@ -115,12 +115,12 @@ class ServiceController extends Controller
             'description'           => 'required|string',
             'headline'              => 'required|string|max:255',
             'headline_description'  => 'required|string',
-            'hero_image'            => 'nullable|image|mimes:jpeg,jpg,png,webp|max:4096',
+            'hero_image'            => 'nullable|image|mimes:jpeg,jpg,png,webp|max:8024',
             'status'                => 'required|in:active,inactive',
             'meta_title'            => 'nullable|string|max:255',
             'meta_description'      => 'nullable|string',
             'meta_keywords'         => 'nullable|string|max:255',
-            'meta_image'            => 'nullable|image|mimes:jpeg,jpg,png,webp|max:4096',
+            'meta_image'            => 'nullable|image|mimes:jpeg,jpg,png,webp|max:8024',
         ]);
 
         // Slug Handling
