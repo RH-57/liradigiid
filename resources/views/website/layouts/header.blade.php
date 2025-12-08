@@ -9,7 +9,7 @@
 
       <!-- Logo -->
       <a href="{{ route('web.home') }}" class="flex items-center flex-shrink-0">
-        <img src="{{ asset('assets/website/img/logo.png') }}" alt="Logo" class="h-15 w-auto" fetchpriority="high" decoding="async">
+        <img src="{{ asset('assets/website/img/logo.webp') }}" alt="Logo" class="h-15 w-auto" fetchpriority="high" decoding="async">
       </a>
 
       <!-- Desktop Menu (center) -->
