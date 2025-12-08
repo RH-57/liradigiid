@@ -77,7 +77,7 @@
                             </div>
                             <div class="col-md-6">
                                 <strong>Headline Description</strong>
-                                <p>{!!$service->description!!}</p>
+                                <p>{!!$service->headline_description!!}</p>
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
