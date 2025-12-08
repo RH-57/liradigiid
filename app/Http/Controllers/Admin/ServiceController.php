@@ -28,14 +28,17 @@ class ServiceController extends Controller
 
     public function store(Request $request) {
          $request->validate([
-            'name'              => 'required|string|max:255',
-            'slug'              => 'nullable|string|max:255|unique:services,slug',
-            'description'       => 'required|string',
-            'status'            => 'required|in:active,inactive',
-            'meta_title'        => 'nullable|string|max:255',
-            'meta_description'  => 'nullable|string',
-            'meta_keywords'     => 'nullable|string|max:255',
-            'meta_image'        => 'nullable|image|mimes:jpeg,jpg,png,webp|max:4096',
+            'name'                  => 'required|string|max:255',
+            'slug'                  => 'nullable|string|max:255|unique:services,slug',
+            'description'           => 'required|string',
+            'headline'              => 'required|string|max:255',
+            'headline_description'  => 'required|string',
+            'hero_image'            => 'nullable|image|mimes:jpeg,jpg,png,webp|max:4096',
+            'status'                => 'required|in:active,inactive',
+            'meta_title'            => 'nullable|string|max:255',
+            'meta_description'      => 'nullable|string',
+            'meta_keywords'         => 'nullable|string|max:255',
+            'meta_image'            => 'nullable|image|mimes:jpeg,jpg,png,webp|max:4096',
         ]);
 
         $baseSlug = Str::slug($request->name);
@@ -49,6 +52,17 @@ class ServiceController extends Controller
 
         $manager = new ImageManager(new Driver());
 
+        $heroImagePath = null;
+        if ($request->hasFile('hero_image')) {
+            $file = $request->file('hero_image');
+            $meta = $manager->read($file->getPathname());
+            $encoded = $meta->encode(new WebpEncoder(quality: 75));
+            $filename = uniqid() . '.webp';
+            $path = 'services/hero/' . $filename;
+            Storage::disk('public')->put($path, (string) $encoded);
+            $heroImagePath = $path;
+        }
+
         $metaImagePath = null;
         if ($request->hasFile('meta_image')) {
             $file = $request->file('meta_image');
@@ -61,14 +75,17 @@ class ServiceController extends Controller
         }
 
         Service::create([
-            'name'             => $request->name,
-            'slug'              => $slug,
-            'description'       => $request->description,
-            'status'            => $request->status,
-            'meta_title'        => $request->meta_title,
-            'meta_keywords'     => $request->meta_keywords,
-            'meta_description'  => $request->meta_description,
-            'meta_image'        => $metaImagePath,
+            'name'                  => $request->name,
+            'slug'                  => $slug,
+            'description'           => $request->description,
+            'headline'              => $request->headline,
+            'headline_description'  => $request->headline_description,
+            'hero_image'            => $heroImagePath,
+            'status'                => $request->status,
+            'meta_title'            => $request->meta_title,
+            'meta_keywords'         => $request->meta_keywords,
+            'meta_description'      => $request->meta_description,
+            'meta_image'            => $metaImagePath,
         ]);
 
         Cache::forget('services');
@@ -93,14 +110,17 @@ class ServiceController extends Controller
         $service = Service::findOrFail($id);
 
         $request->validate([
-            'name'              => 'required|string|max:255',
-            'slug'              => 'nullable|string|max:255|unique:services,slug,' . $service->id,
-            'description'       => 'required|string',
-            'status'            => 'required|in:active,inactive',
-            'meta_title'        => 'nullable|string|max:255',
-            'meta_description'  => 'nullable|string',
-            'meta_keywords'     => 'nullable|string|max:255',
-            'meta_image'        => 'nullable|image|mimes:jpeg,jpg,png,webp|max:4096',
+            'name'                  => 'required|string|max:255',
+            'slug'                  => 'nullable|string|max:255|unique:services,slug,' . $service->id,
+            'description'           => 'required|string',
+            'headline'              => 'required|string|max:255',
+            'headline_description'  => 'required|string',
+            'hero_image'            => 'nullable|image|mimes:jpeg,jpg,png,webp|max:4096',
+            'status'                => 'required|in:active,inactive',
+            'meta_title'            => 'nullable|string|max:255',
+            'meta_description'      => 'nullable|string',
+            'meta_keywords'         => 'nullable|string|max:255',
+            'meta_image'            => 'nullable|image|mimes:jpeg,jpg,png,webp|max:4096',
         ]);
 
         // Slug Handling
@@ -113,7 +133,24 @@ class ServiceController extends Controller
         }
 
         $manager = new ImageManager(new Driver());
+        $heroImagePath = $service->hero_image;
         $metaImagePath = $service->meta_image;
+
+        // Jika ada upload gambar baru
+        if ($request->hasFile('hero_image')) {
+            // Hapus gambar lama jika ada
+            if ($service->hero_image && Storage::disk('public')->exists($service->hero_image)) {
+                Storage::disk('public')->delete($service->hero_image);
+            }
+
+            $file = $request->file('hero_image');
+            $meta = $manager->read($file->getPathname());
+            $encoded = $meta->encode(new WebpEncoder(quality: 75));
+            $filename = uniqid() . '.webp';
+            $path = 'services/hero/' . $filename;
+            Storage::disk('public')->put($path, (string) $encoded);
+            $heroImagePath = $path;
+        }
 
         // Jika ada upload gambar baru
         if ($request->hasFile('meta_image')) {
@@ -132,14 +169,17 @@ class ServiceController extends Controller
         }
 
         $service->update([
-            'name'             => $request->name,
-            'slug'              => $slug,
-            'description'       => $request->description,
-            'status'            => $request->status,
-            'meta_title'        => $request->meta_title,
-            'meta_keywords'      => $request->meta_keywords,
-            'meta_description'  => $request->meta_description,
-            'meta_image'        => $metaImagePath,
+            'name'                  => $request->name,
+            'slug'                  => $slug,
+            'description'           => $request->description,
+            'headline'              => $request->headline,
+            'headline_description'  => $request->headline_description,
+            'hero_image'            => $heroImagePath,
+            'status'                => $request->status,
+            'meta_title'            => $request->meta_title,
+            'meta_keywords'         => $request->meta_keywords,
+            'meta_description'      => $request->meta_description,
+            'meta_image'            => $metaImagePath,
         ]);
 
         Cache::forget('services');
@@ -151,6 +191,10 @@ class ServiceController extends Controller
     {
         $service = Service::findOrFail($id);
 
+        // Hapus gambar jika ada
+        if ($service->hero_image && Storage::disk('public')->exists($service->hero_image)) {
+            Storage::disk('public')->delete($service->hero_image);
+        }
         // Hapus gambar jika ada
         if ($service->meta_image && Storage::disk('public')->exists($service->meta_image)) {
             Storage::disk('public')->delete($service->meta_image);

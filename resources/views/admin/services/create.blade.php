@@ -60,11 +60,34 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Add New Service</h5>
+              <h5 class="card-title">Page</h5>
 
               <!-- Form Start -->
               <form action="{{ route('services.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
+
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label">Headline</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="headline" value="{{ old('headline') }}" class="form-control" required>
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label">Headline Description</label>
+                  <div class="col-sm-10">
+                    <textarea name="headline_description" class="form-control">{{ old('headline_description') }}</textarea>
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label">Hero Image</label>
+                  <div class="col-sm-10">
+                    <input type="file" name="hero_image" class="form-control">
+                  </div>
+                </div>
+
+                <h5 class="card-title">Service</h5>
 
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label">Name</label>

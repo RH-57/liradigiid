@@ -41,7 +41,7 @@
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="{{ route('dashboards.index') }}">Home</a></li>
           <li class="breadcrumb-item"><a href="{{ route('services.index') }}">Services</a></li>
-          <li class="breadcrumb-item active">Create</li>
+          <li class="breadcrumb-item active">Show</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -53,7 +53,10 @@
                 <ul class="nav nav-tabs nav-tabs-bordered">
 
                     <li class="nav-item">
-                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#service-info">Info</button>
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#service-page">Page</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#service-info">Info</button>
                     </li>
 
                     <li class="nav-item">
@@ -64,8 +67,32 @@
 
                 <div class="tab-content pt-2">
 
+                    <!-- service-page -->
+                    <div class="tab-pane fade show active" id="service-page">
+                        <h5 class="card-title">Page</h5>
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <strong>Headline</strong>
+                                <p>{{$service->headline}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <strong>Headline Description</strong>
+                                <p>{!!$service->description!!}</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <strong>Hero Image</strong><br>
+                            @if($service->hero_image)
+                            <img src="{{ asset('storage/' . $service->hero_image) }}"
+                                alt="Meta {{ $service->title }}"
+                                class="img-fluid rounded shadow-sm"
+                                style="max-height:200px;">
+                            @endif
+                        </div>
+                    </div>
+
                     <!-- Info Tab -->
-                    <div class="tab-pane fade show active" id="service-info">
+                    <div class="tab-pane fade" id="service-info">
                         <h5 class="card-title">Content</h5>
                         <div class="row mb-3">
                             <div class="col-md-4">
@@ -99,18 +126,18 @@
                     <div class="tab-pane fade" id="service-seo">
                         <h5 class="card-title">SEO Information</h5>
                         <div class="row mb-3">
-                        <div class="col-md-4">
-                            <strong>Meta Title</strong>
-                            <p>{{ $service->meta_title }}</p>
-                        </div>
-                        <div class="col-md-4">
-                            <strong>Meta Keywords</strong>
-                            <p>{{ $service->meta_keywords }}</p>
-                        </div>
-                        <div class="col-md-4">
-                            <strong>Meta Description</strong>
-                            <p>{{ $service->meta_description }}</p>
-                        </div>
+                            <div class="col-md-4">
+                                <strong>Meta Title</strong>
+                                <p>{{ $service->meta_title }}</p>
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Meta Keywords</strong>
+                                <p>{{ $service->meta_keywords }}</p>
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Meta Description</strong>
+                                <p>{{ $service->meta_description }}</p>
+                            </div>
                         </div>
                         <div class="col-md-4 mb-3">
                             <strong>Meta Image</strong><br>

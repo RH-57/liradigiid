@@ -11,7 +11,17 @@ class Service extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'name', 'slug', 'description', 'status', 'meta_title', 'meta_keywords', 'meta_description', 'meta_image'
+        'name',
+        'slug',
+        'description',
+        'headline',
+        'headline_description',
+        'hero_image',
+        'status',
+        'meta_title',
+        'meta_keywords',
+        'meta_description',
+        'meta_image'
     ];
 
     public function packages()

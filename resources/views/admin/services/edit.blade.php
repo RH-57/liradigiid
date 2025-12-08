@@ -52,6 +52,29 @@
               <form action="{{ route('services.update', $service->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
+                <h5 class="card-title">Page</h5>
+
+                <div class="mb-3">
+                  <label for="headline" class="form-label">Headline</label>
+                  <input type="text" name="headline" class="form-control"
+                         value="{{ old('headline', $service->headline) }}" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="headline_description" class="form-label">Headline Description</label>
+                  <textarea name="headline_description" class="form-control" rows="4" required>{{ old('headline_description', $service->headline_description) }}</textarea>
+                </div>
+
+                <div class="mb-3">
+                  <label for="hero_image" class="form-label">Hero Image</label><br>
+                  @if($service->hero_image)
+                    <img src="{{ asset('storage/'.$service->hero_image) }}" alt="Hero Image" class="img-thumbnail mb-2" width="200">
+                  @endif
+                  <input type="file" name="hero_image" class="form-control">
+                  <small class="text-muted">Kosongkan jika tidak ingin mengganti</small>
+                </div>
+
+                <h5 class="card-title">Service</h5>
 
                 <div class="mb-3">
                   <label for="title" class="form-label">Name</label>
@@ -73,7 +96,7 @@
                 </div>
 
 
-                <h5 class="mt-4">SEO Meta</h5>
+                <h5 class="card-title">SEO Meta</h5>
                 <div class="mb-3">
                   <label for="meta_title" class="form-label">Meta Title</label>
                   <input type="text" name="meta_title" class="form-control"
