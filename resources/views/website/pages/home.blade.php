@@ -54,6 +54,19 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative z-10">
 
             <div class="space-y-4 max-w-xl text-white text-center md:text-left">
+                <div class="flex flex-wrap justify-center md:justify-start gap-2 mb-4">
+                    <span class="px-3 py-1 text-xs font-semibold bg-white/20 backdrop-blur-md text-white rounded-full border border-white/30">
+                        <strong>Bergaransi</strong>
+                    </span>
+                    <span class="px-3 py-1 text-xs font-semibold bg-white/20 backdrop-blur-md text-white rounded-full border border-white/30">
+                        <strong>Aman</strong>
+                    </span>
+                    <span class="px-3 py-1 text-xs font-semibold bg-white/20 backdrop-blur-md text-white rounded-full border border-white/30">
+                        <strong>Terpercaya</strong>
+                    </span>
+                </div>
+
+
                 <h1 class="text-3xl md:text-4xl lg:text-4xl font-bold leading-snug">
                     Bangun <span class="text-[#FACC15] [text-shadow:_0_0_10px_rgba(255,204,0,0.9)]">Kredibilitas</span> Bisnis Anda dengan Website Profesional & Terpercaya
                 </h1>
@@ -117,11 +130,11 @@
                 </span>
 
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-600 leading-snug">
-                    Masalah yang Sering Dialami <span class="text-blue-600">Pelaku Bisnis</span>
+                    Masalah yang Sering Dialami <span class="text-blue-600">Pebisnis</span>
                 </h2>
 
                 <p class="text-gray-600 text-base md:text-lg">
-                    Banyak pelaku bisnis ingin memiliki website profesional, tetapi sering terhambat oleh berbagai masalah berikut.
+                    Berikut beberapa kendala yang sering membuat bisnis sulit memiliki website profesional.
                 </p>
 
                 <div class="pt-6">
@@ -162,7 +175,7 @@
                     <h3 class="text-xl font-bold mb-1 drop-shadow-sm">Bingung Mulai Dari Mana</h3>
 
                     <p class="text-blue-100 text-sm drop-shadow-sm">
-                        Bingung harus mulai dari desain, struktur halaman, atau fitur apa yang dibutuhkan.
+                        Bingung soal desain, struktur, dan fitur yang dibutuhkan.
                     </p>
                 </div>
 
@@ -182,9 +195,9 @@
                     <div class="text-4xl mb-3">
                         <i class="fa-solid fa-user-xmark text-yellow-300"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-1">Sulit Menemukan Agency Terpercaya</h3>
+                    <h3 class="text-xl font-bold mb-1">Sulit Cari Jasa Terpercaya</h3>
                     <p class="text-blue-100 text-sm">
-                        Banyak klien takut pengerjaan tidak selesai atau hasilnya tidak sesuai harapan.
+                        Takut hasil tidak sesuai atau pengerjaan tidak selesai.
                     </p>
                 </div>
 
@@ -203,9 +216,9 @@
                     <div class="text-4xl mb-3">
                         <i class="fa-solid fa-triangle-exclamation text-yellow-300"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-1">Website Tidak Sesuai Kebutuhan Bisnis</h3>
+                    <h3 class="text-xl font-bold mb-1">Website Tidak Efektif</h3>
                     <p class="text-blue-100 text-sm">
-                        Fokus hanya pada desain, bukan pada value dan tujuan bisnis jangka panjang.
+                        Desain bagus tapi tidak mendukung tujuan bisnis.
                     </p>
                 </div>
 
@@ -224,9 +237,9 @@
                     <div class="text-4xl mb-3">
                         <i class="fa-solid fa-headset text-yellow-300"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-1">Tidak Ada Support Setelah Website Live</h3>
+                    <h3 class="text-xl font-bold mb-1">Tidak Ada Support</h3>
                     <p class="text-blue-100 text-sm">
-                        Banyak jasa website selesai project lalu tidak memberikan pendampingan jangka panjang.
+                        Setelah website selesai, tidak ada pendampingan lagi.
                     </p>
                 </div>
 
@@ -239,12 +252,12 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
 
             <!-- Heading -->
-            <div class="mb-12" data-aos="zoom-in">
+            <div class="mb-10" data-aos="zoom-in">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-600 mb-4">
                     Kami Hadir Menjawab Semua Masalah
                 </h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">
-                    Kami hadir bukan hanya untuk membuat website, tetapi memberikan solusi dari berbagai masalah yang sering dialami pelaku bisnis.
+                    Kami bantu membuat website yang mudah, cepat, dan sesuai kebutuhan bisnis Anda.
                 </p>
             </div>
 
@@ -268,7 +281,7 @@
                     </div>
                     <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Dibimbing Dari Nol</h3>
                     <p class="text-gray-50 text-sm sm:text-base">
-                        Kami membantu Anda dari menentukan kebutuhan, struktur website, hingga fitur yang tepat—tanpa bingung memulai.
+                        Kami pandu dari awal hingga website Anda siap online.
                     </p>
                 </div>
 
@@ -287,9 +300,9 @@
                     <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
                         <i class="fa-solid fa-circle-check text-yellow-300 text-2xl sm:text-3xl"></i>
                     </div>
-                    <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Terpercaya & Transparan</h3>
+                    <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Proses Jelas & Aman</h3>
                     <p class="text-gray-50 text-sm sm:text-base">
-                        Proses pengerjaan jelas, progress rutin, dan hasil sesuai kesepakatan—tanpa takut website mangkrak.
+                         Progress terpantau, hasil sesuai kesepakatan.
                     </p>
                 </div>
 
@@ -308,9 +321,9 @@
                     <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
                         <i class="fa-solid fa-chart-line text-yellow-300 text-2xl sm:text-3xl"></i>
                     </div>
-                    <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Sesuai Kebutuhan Bisnis</h3>
+                    <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Tepat Untuk Bisnis Anda</h3>
                     <p class="text-gray-50 text-sm sm:text-base">
-                        Website dirancang untuk mendukung tujuan bisnis: brand, penjualan, kredibilitas, dan pertumbuhan jangka panjang.
+                        Website dirancang sesuai target bisnis Anda.
                     </p>
                 </div>
 
@@ -329,13 +342,26 @@
                     <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
                         <i class="fa-solid fa-handshake text-yellow-300 text-2xl sm:text-3xl"></i>
                     </div>
-                    <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Pendampingan Berkelanjutan</h3>
+                    <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Support Berkelanjutan</h3>
                     <p class="text-gray-50 text-sm sm:text-base">
-                        Kami tidak hanya membuat website—kami menjadi partner jangka panjang yang selalu siap membantu.
+                          Kami selalu siap membantu kapan pun Anda butuh.
                     </p>
                 </div>
 
             </div>
+            <div class="mt-12">
+                <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20Liradigi%2C%20saya%20tertarik%20untuk%20membuat%20website.%20Bisa%20minta%20informasi%20lebih%20lanjut%3F"
+                    target="_blank"
+                    class="group relative px-6 py-3 font-semibold text-white rounded-2xl shadow-[0_0_20px_6px_rgba(100,109,255,0.8)]
+                        bg-blue-600
+                        hover:bg-yellow-500 hover:text-white
+                        transition-all duration-300 transform hover:-translate-y-1
+                        hover:shadow-[0_0_20px_6px_rgba(255,204,0,0.6)]
+                        overflow-hidden">
+                    Konsultasi Sekarang Gratis
+                </a>
+            </div>
+
         </div>
     </section>
 

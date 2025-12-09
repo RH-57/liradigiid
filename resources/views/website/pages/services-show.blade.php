@@ -121,7 +121,7 @@
                     transition-all duration-300"
                     data-aos="zoom-in" data-aos-delay="200">
                     <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
-                        <i class="fa-solid fa-palette text-white text-2xl sm:text-3xl"></i>
+                        <i class="fa-solid fa-palette text-yellow-300 text-2xl sm:text-3xl"></i>
                     </div>
                     <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Desain Profesional</h3>
                     <p class="text-gray-300 text-sm sm:text-base">
@@ -142,7 +142,7 @@
                     transition-all duration-300"
                     data-aos="zoom-in" data-aos-delay="200">
                     <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
-                        <i class="fa-solid fa-bolt text-white text-2xl sm:text-3xl"></i>
+                        <i class="fa-solid fa-bolt text-yellow-300 text-2xl sm:text-3xl"></i>
                     </div>
                     <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Cepat & Responsif</h3>
                     <p class="text-gray-300 text-sm sm:text-base">
@@ -163,7 +163,7 @@
                     transition-all duration-300"
                     data-aos="zoom-in" data-aos-delay="200">
                     <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
-                        <i class="fa-solid fa-headset text-white text-2xl sm:text-3xl"></i>
+                        <i class="fa-solid fa-headset text-yellow-300 text-2xl sm:text-3xl"></i>
                     </div>
                     <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Support Penuh</h3>
                     <p class="text-gray-300 text-sm sm:text-base">
@@ -184,7 +184,7 @@
                     transition-all duration-300"
                     data-aos="zoom-in" data-aos-delay="200">
                     <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-full">
-                        <i class="fa-solid fa-users text-white text-2xl sm:text-3xl"></i>
+                        <i class="fa-solid fa-users text-yellow-300 text-2xl sm:text-3xl"></i>
                     </div>
                     <h3 class="text-lg sm:text-xl font-semibold text-white mb-2">Tim Berpengalaman</h3>
                     <p class="text-gray-300 text-sm sm:text-base">
