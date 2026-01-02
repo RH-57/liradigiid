@@ -65,7 +65,7 @@
 
     <!-- Garis pemisah -->
     <div class="border-t border-blue-700 pt-6 text-center text-blue-200 text-sm">
-      © 2025 <span class="font-semibold text-white"><a href="" class="text-white hover:text-yellow-400">Lintas Arah Digital</a></span>. Semua hak dilindungi.
+      © 2026 <span class="font-semibold text-white"><a href="" class="text-white hover:text-yellow-400">Lintas Arah Digital</a></span>. Semua hak dilindungi.
     </div>
   </div>
 </footer>
