@@ -149,7 +149,7 @@
               class="w-full h-56 object-cover transform group-hover:scale-110 transition duration-700">
           </div>
           <div class="p-6">
-            <a href="">
+            <a href="{{ route('web.articles.show', [$article->category, $article->slug]) }}">
               <h3 class="text-xl font-semibold text-[#136ad5] mb-2">{{ $article->title }}</h3>
             </a>
             <p class="text-gray-600 text-sm mb-4 line-clamp-3">
